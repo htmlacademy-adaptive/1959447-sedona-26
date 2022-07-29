@@ -1,7 +1,7 @@
 # Личный проект «Седона» 
 
 * Студент: [Elena Mihailova](https://up.htmlacademy.ru/adaptive/26/user/1959447).
-* Наставник: `Неизвестно`.
+* Наставник: [Сергей Остаповец](https://htmlacademy.ru/profile/seraphim).
 
 ---
 
