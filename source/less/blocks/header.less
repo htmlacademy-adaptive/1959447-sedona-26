@@ -11,10 +11,21 @@
   display: grid;
   align-items: flex-start;
   grid-template-columns: auto min-content;
+
+  @media (min-width: @vTabletWidth) {
+    padding-left: 28px;
+    padding-right: 28px;
+  }
 }
 
 .header__dropdown {
   display: none;
+
+  @media (min-width: @vTabletWidth) {
+    display: block;
+    grid-column: 1/-1;
+    grid-row: 1/2;
+  }
 }
 
 .header__logo {

@@ -9,6 +9,13 @@
   margin: 0;
   margin-left: -18px;
   margin-right: -18px;
+
+  @media (min-width: @vTabletWidth) {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-areas: "item1 item2 . item3 item4";
+    margin: 0 auto;
+  }
 }
 
 .navigation__link {
@@ -24,9 +31,37 @@
   display: block;
   box-shadow: 0 1px 0 rgba(1, 1, 1, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.2);
   background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.2) 100%);
+
+  @media (min-width: @vTabletWidth) {
+    font-size: 14px;
+    line-height: 1.5;
+    color: @colorBlackDark;
+    box-shadow: none;
+    background: none;
+  }
 }
 
 .navigation__item {
   width: 100%;
   background-color: @colorBasicBlue;
+
+  @media (min-width: @vTabletWidth) {
+    background-color: inherit;
+
+    &:nth-child(1) {
+      grid-area: item1;
+    }
+
+    &:nth-child(2) {
+      grid-area: item2;
+    }
+
+    &:nth-child(3) {
+      grid-area: item3;
+    }
+
+    &:nth-child(4) {
+      grid-area: item4;
+    }
+  }
 }
