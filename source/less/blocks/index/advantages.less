@@ -1,6 +1,5 @@
 .advantages {
   background-color: @colorBasicBlue;
-  padding-bottom: 30px;
   margin-top: -1px;
 }
 
@@ -17,6 +16,7 @@
   padding: 0;
   margin: 0;
   counter-reset: orderedlist;
+  background-color: @colorBasicGrey;
 }
 
 .advantages__box {
@@ -28,6 +28,13 @@
   padding-top: 8px;
   background-color: @colorWhite;
   clip-path: polygon(0 0, 100% 0, 100% 85%, 50% 100%, 0 85%);
+
+  @media (min-width: @vTabletWidth) {
+    padding-left: 21px;
+    padding-top: 3px;
+    padding-bottom: 56px;
+    clip-path: none;
+  }
 }
 
 .advantages__name {
@@ -42,6 +49,12 @@
   &--color {
     color: @colorWhite;
   }
+
+  @media (min-width: @vTabletWidth) {
+    font-size: 21px;
+    line-height: 1.24;
+    margin-bottom: 57px;
+  }
 }
 
 .advantages__item {
@@ -50,10 +63,13 @@
   &--color {
     background-color: @colorBasicBlue;
   }
+
+  @media (min-width: @vTabletWidth) {
+    padding-top: 0;
+  }
 }
 
 .advantages__description {
-  font-weight: 700;
   text-align: center;
   text-transform: uppercase;
   margin: 0;
@@ -68,8 +84,21 @@
 .advantages__image {
   display: block;
   margin-top: 38px;
+
+  @media (min-width: @vTabletWidth) {
+    margin-top: 0;
+    flex: 0 0 512px;
+  }
 }
 
-// .advantages__secondary {
-//   margin: 0 -20px;
-// }
+.advantages__item-wrapper {
+  @media (min-width: @vTabletWidth) {
+    display: flex;
+  }
+}
+
+.advantages__item-text {
+  @media (min-width: @vTabletWidth) {
+    padding: 40px 20px 0;
+  }
+}

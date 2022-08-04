@@ -1,18 +1,23 @@
-.info {
-  margin-top: -47px;
-}
-
 .info__container {
   background: @colorWhite url("../img/back-mobile.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   padding-top: 90px;
+
+  @media (min-width: @vTabletWidth) {
+    padding-top: 78px;
+  }
 }
 
 .info__description {
   background-color: @colorWhite;
   padding: 58px 28px 27px 22px;
   clip-path: polygon(0 0, 50% 15%, 100% 0, 100% 100%, 0 100%);
+
+  @media (min-width: @vTabletWidth) {
+    padding: 105px 124px 27px;
+    clip-path: polygon(0 11%, 4% 13%, 4% 0, 50% 31%, 96% 0, 96% 13%, 100% 11%, 100% 100%, 0 100%);
+  }
 }
 
 .info__description-text {
@@ -23,13 +28,31 @@
   text-transform: uppercase;
   color: @colorBlackDark;
   text-align: center;
+
+  @media (min-width: @vTabletWidth) {
+    font-size: 21px;
+    line-height: 1.24;
+  }
+
+  // @media (min-width: @vDesktopWidth) {
+
+  // }
 }
 
 .info__slogan {
   padding-bottom: 60px;
+
+  @media (min-width: @vTabletWidth) {
+    padding-bottom: 33px;
+  }
 }
 
 .info__slogan-img {
   margin: 0 auto;
   display: block;
+
+  @media (min-width: @vTabletWidth) {
+    width: 461px;
+    height: 350px;
+  }
 }

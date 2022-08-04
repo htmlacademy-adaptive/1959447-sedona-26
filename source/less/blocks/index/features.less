@@ -2,10 +2,28 @@
   background-color: @colorWhite;
   list-style: none;
   padding: 32px 20px 22px 65px;
+
+  @media (min-width: @vTabletWidth) {
+    padding: 60px 34px;
+    display: flex;
+    justify-content: space-between;
+  }
 }
 
 .features__item {
   margin-bottom: 30px;
+
+  @media (min-width: @vTabletWidth) {
+    margin-right: 70px;
+    margin-bottom: 0;
+    margin-top: 94px;
+  }
+}
+
+.features__item:last-child {
+  @media (min-width: @vTabletWidth) {
+    margin-right: 0;
+  }
 }
 
 .features__name {
@@ -15,9 +33,19 @@
   line-height: 1.44;
   text-transform: uppercase;
   margin-bottom: 16px;
+
+  @media (min-width: @vTabletWidth) {
+    font-size: 21px;
+    line-height: 1.24;
+    text-align: center;
+  }
 }
 
 .features__description {
   margin: 0;
   text-transform: uppercase;
+
+  @media (min-width: @vTabletWidth) {
+    text-align: center;
+  }
 }
