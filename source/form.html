@@ -8,7 +8,7 @@
     <title>Форма отзыва</title>
   </head>
   <body class="page__body">
-    <header class="header">
+    <header class="header header--inner">
       <div class="header__wrapper">
         <div class="header__logo">
           <a class="header__logo-link">
@@ -31,16 +31,16 @@
             <ul class="navigation__list">
               <li class="navigation__item">
                 <a
-                  class="navigation__link link navigation__link--current"
+                  class="navigation__link link"
                   href="index.html"
                   >Главная</a
                 >
               </li>
               <li class="navigation__item">
-                <a class="navigation__link link" href="#">Фото и видео</a>
+                <a class="navigation__link link" href="catalog.html">Фото и видео</a>
               </li>
               <li class="navigation__item">
-                <a class="navigation__link link" href="form.html"
+                <a class="navigation__link link navigation__link--current"
                   >Форма отзыва</a
                 >
               </li>
@@ -61,13 +61,15 @@
       <h1 class="visually-hidden">Отзыв об отелях и достопримечательностях.</h1>
 
       <header class="form__header hero">
-        <img
+        <div class="hero__wrapper">
+          <img
           class="hero__image"
           src="img/sedona.svg"
           width="229"
           height="39"
           alt="Название города Седона"
         />
+        </div>
       </header>
 
       <section class="form__content">

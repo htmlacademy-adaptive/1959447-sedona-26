@@ -9,7 +9,7 @@
   </head>
 
   <body class="page__body">
-    <header class="header">
+    <header class="header header--inner">
       <div class="header__wrapper">
         <div class="header__logo">
           <a class="header__logo-link">
@@ -23,7 +23,7 @@
           </a>
         </div>
 
-        <button class="header__toggle header__toggle--opened" type="button">
+        <button class="header__toggle" type="button">
           <span class="visually-hidden">Открыть меню</span>
         </button>
 
@@ -32,13 +32,13 @@
             <ul class="navigation__list">
               <li class="navigation__item">
                 <a
-                  class="navigation__link link navigation__link--current"
+                  class="navigation__link link"
                   href="index.html"
                   >Главная</a
                 >
               </li>
               <li class="navigation__item">
-                <a class="navigation__link link" href="#">Фото и видео</a>
+                <a class="navigation__link link navigation__link--current">Фото и видео</a>
               </li>
               <li class="navigation__item">
                 <a class="navigation__link link" href="form.html"
@@ -64,22 +64,27 @@
       </h1>
 
       <header class="catalog__header hero">
-        <img
+        <div class="hero__wrapper">
+          <img
           class="hero__image"
           src="img/sedona.svg"
           width="229"
           height="39"
           alt="Название города Седона"
         />
+        </div>
       </header>
 
       <section class="catalog__photo gallery">
         <div class="container">
-          <h2 class="catalog__title">Фото и видео</h2>
-          <p class="catalog__description">
-            Не&nbsp;можете решиться на&nbsp;путешествие из-за курса? Фотографии
-            помогут вам забыть о&nbsp;политике и&nbsp;экономике.
-          </p>
+          <div class="catalog__intro">
+            <h2 class="catalog__title">Фото и видео</h2>
+            <p class="catalog__description">
+              Не&nbsp;можете решиться на&nbsp;путешествие из-за курса? Фотографии
+              помогут вам забыть о&nbsp;политике и&nbsp;экономике.
+            </p>
+          </div>
+
           <ul class="gallery__list">
             <li class="gallery__item card">
               <img

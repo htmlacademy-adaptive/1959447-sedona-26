@@ -2,9 +2,23 @@
   background: @colorWhite url("../img/back-desktop.jpg");
   padding-top: 52px;
   padding-bottom: 62px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  clip-path: polygon(0 0, 100% 0, 100% 85%, 50% 100%, 0 85%, 0 0);
+
+  @media (min-width: @vTabletWidth) {
+    clip-path: polygon(0 0, 100% 0, 100% 84%, 96% 85%, 96% 77%, 50% 96%, 4% 77%, 4% 84%, 0 84%);
+    padding-top: 93px;
+    padding-bottom: 130px;
+  }
 }
 
 .hero__image {
   display: block;
   margin: 0 auto;
+
+  @media (min-width: @vTabletWidth) {
+    height: auto;
+    width: 460px;
+  }
 }

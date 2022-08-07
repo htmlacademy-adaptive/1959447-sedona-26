@@ -1,10 +1,23 @@
 .card {
-  padding-top: 24px;
+  @media (min-width: @vTabletWidth) {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    align-items: center;
+  }
 }
 
 .card__image {
   display: block;
   border: none;
+
+  @media (min-width: @vTabletWidth) {
+    grid-column: 1/-1;
+    width: 100%;
+
+    &:first-child {
+      height: 400px;
+    }
+  }
 }
 
 .card__name {
@@ -14,17 +27,36 @@
   font-size: 14px;
   line-height: 1.5;
   margin-top: 15px;
+
+  @media (min-width: @vTabletWidth) {
+    margin-left: 20px;
+    margin-top: 23px;
+  }
 }
 
 .card__author {
   margin: 0;
   text-align: left;
   margin-bottom: 11px;
+
+  @media (min-width: @vTabletWidth) {
+    grid-column: 1/2;
+    grid-row: 3/4;
+    margin-left: 20px;
+  }
 }
 
 .card__like {
   display: flex;
   margin-bottom: 25px;
+
+  @media (min-width: @vTabletWidth) {
+    grid-column: 2/3;
+    grid-row: 2/4;
+    margin-left: auto;
+    margin-right: 20px;
+    margin-bottom: 0;
+  }
 }
 
 .card__like-count {

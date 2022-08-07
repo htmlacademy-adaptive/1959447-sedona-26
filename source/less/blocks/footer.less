@@ -2,8 +2,23 @@
   padding-top: 39px;
   padding-bottom: 20px;
   text-align: center;
+
+  @media (min-width: @vTabletWidth) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 36px 45px;
+  }
 }
 
 .footer__copyright {
   margin-top: 40px;
+
+  @media (min-width: @vTabletWidth) {
+    margin-top: 0;
+  }
+}
+
+.footer__hashtag-pic {
+  height: auto;
 }

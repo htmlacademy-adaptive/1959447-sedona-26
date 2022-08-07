@@ -17,12 +17,17 @@
   margin: 0;
   counter-reset: orderedlist;
   background-color: @colorBasicGrey;
+  padding-bottom: 39px;
+
+  @media (min-width: @vTabletWidth) {
+    padding-bottom: 42px;
+  }
 }
 
 .advantages__box {
   position: relative;
   display: block;
-  padding-bottom: 53px;
+  padding-bottom: 50px;
   padding-left: 17px;
   padding-right: 20px;
   padding-top: 8px;
@@ -58,7 +63,7 @@
 }
 
 .advantages__item {
-  padding-top: 33px;
+  padding-top: 36px;
 
   &--color {
     background-color: @colorBasicBlue;
@@ -84,10 +89,17 @@
 .advantages__image {
   display: block;
   margin-top: 38px;
+  width: 100%;
 
   @media (min-width: @vTabletWidth) {
     margin-top: 0;
-    flex: 0 0 512px;
+    flex: 0 0 66%;
+    margin-left: auto;
+
+    &--order {
+      order: -1;
+      margin-right: auto;
+    }
   }
 }
 
@@ -100,5 +112,34 @@
 .advantages__item-text {
   @media (min-width: @vTabletWidth) {
     padding: 40px 20px 0;
+  }
+
+  @media (min-width: @vDesktopWidth) {
+    padding: 47px 52px 0;
+  }
+}
+
+.advantages__item-box {
+  padding-left: 18px;
+  padding-right: 18px;
+
+  @media (min-width: @vTabletWidth) {
+    display: flex;
+    padding-top: 38px;
+    padding-left: 40px;
+    padding-right: 30px;
+    column-gap: 80px;
+  }
+}
+
+.advantages__item-box .advantages__item {
+  padding-bottom: 34px;
+
+  &:not(:first-child) {
+    border-top: 1px solid @colorBorderGrey;
+
+    @media (min-width: @vTabletWidth) {
+      border: none;
+    }
   }
 }
