@@ -1,3 +1,19 @@
 .video {
   padding-top: 17px;
+  text-align: center;
+
+  @media (min-width: @vTabletWidth) {
+    padding: 58px 60px 40px;
+  }
+
+  @media (min-width: @vDesktopWidth) {
+    padding-left: 200px;
+    padding-right: 200px;
+  }
+}
+
+.video__content {
+  @media (min-width: @vTabletWidth) {
+    width: 100%;
+  }
 }
