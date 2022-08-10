@@ -1,10 +1,53 @@
 .card {
-  padding-top: 24px;
+  @media (min-width: @vTabletWidth) {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: @colorBasicGrey;
+  }
+
+  @media (min-width: @vDesktopWidth) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
 }
 
 .card__image {
-  display: block;
   border: none;
+  display: block;
+  width: 100%;
+
+  @media (min-width: @vTabletWidth) {
+    grid-column: 1/-1;
+  }
+
+  @media (min-width: @vDesktopWidth) {
+    min-height: 260px;
+    grid-row: 1/3;
+  }
+}
+
+.card--popular .card__image {
+  @media (min-width: @vTabletWidth) {
+    min-height: 400px;
+    width: 100%;
+  }
+}
+
+.card__description {
+  @media (min-width: @vTabletWidth) {
+    display: flex;
+    align-items: center;
+  }
+
+  @media (min-width: @vDesktopWidth) {
+    grid-column: 1/-1;
+    grid-row: 2/3;
+    color: @colorWhite;
+    background-color: rgba(0, 0, 0, 0.3);
+    padding-top: 22px;
+    padding-bottom: 15px;
+  }
 }
 
 .card__name {
@@ -14,17 +57,42 @@
   font-size: 14px;
   line-height: 1.5;
   margin-top: 15px;
+
+  @media (min-width: @vTabletWidth) {
+    margin-left: 20px;
+    margin-top: 23px;
+  }
 }
 
 .card__author {
   margin: 0;
   text-align: left;
   margin-bottom: 11px;
+
+  @media (min-width: @vTabletWidth) {
+    grid-column: 1/2;
+    grid-row: 3/4;
+    margin-left: 20px;
+  }
+
+  @media (min-width: @vDesktopWidth) {
+    margin-bottom: 0;
+  }
 }
 
 .card__like {
   display: flex;
   margin-bottom: 25px;
+
+  @media (min-width: @vTabletWidth) {
+    margin-left: auto;
+    margin-right: 20px;
+    margin-bottom: 0;
+  }
+
+  @media (min-width: @vDesktopWidth) {
+    color: @colorWhite;
+  }
 }
 
 .card__like-count {

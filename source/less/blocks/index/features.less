@@ -1,11 +1,44 @@
 .features {
-  background-color: #ffffff;
+  background-color: @colorWhite;
   list-style: none;
-  padding: 30px 20px 32px 65px;
+  padding: 24px 20px 28px 18px;
+
+  @media (min-width: @vTabletWidth) {
+    padding-bottom: 36px;
+    padding-top: 60px;
+    padding-left: 27px;
+    padding-right: 27px;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  @media (min-width: @vDesktopWidth) {
+    padding-left: 45px;
+    padding-right: 45px;
+    padding-bottom: 57px;
+  }
 }
 
 .features__item {
-  margin-bottom: 30px;
+  margin-bottom: 23px;
+  display: flex;
+
+  @media (min-width: @vTabletWidth) {
+    flex-direction: column;
+    align-items: center;
+    flex: 0 0 200px;
+  }
+
+  @media (min-width: @vDesktopWidth) {
+    flex: 0 0 313px;
+  }
+}
+
+.features__item:last-child {
+  @media (min-width: @vTabletWidth) {
+    margin-right: 0;
+  }
 }
 
 .features__name {
@@ -15,9 +48,67 @@
   line-height: 1.44;
   text-transform: uppercase;
   margin-bottom: 16px;
+
+  @media (min-width: @vTabletWidth) {
+    font-size: 21px;
+    line-height: 1.24;
+    text-align: center;
+    margin-bottom: 24px;
+  }
 }
 
 .features__description {
   margin: 0;
   text-transform: uppercase;
+
+  @media (min-width: @vTabletWidth) {
+    text-align: center;
+  }
+
+  @media (min-width: @vDesktopWidth) {
+    margin-left: 10px;
+  }
+}
+
+.features__wrapper {
+  padding-top: 8px;
+  text-align: left;
+
+  @media (min-width: @vTabletWidth) {
+    padding-top: 23px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.features__icon {
+  fill: @colorBasicBlue;
+  height: 40px;
+  flex: 0 0 40px;
+  margin-right: 8px;
+
+  .features__item--meal & {
+    margin-right: 10px;
+    width: 76px;
+    height: 76px;
+
+    @media (min-width: @vTabletWidth) {
+      margin-right: 0;
+    }
+  }
+
+  .features__item--gift & {
+    margin-right: 5px;
+
+    @media (min-width: @vTabletWidth) {
+      margin-right: 0;
+    }
+  }
+
+  @media (min-width: @vTabletWidth) {
+    height: 76px;
+    flex: 0 0 76px;
+    margin-right: 0;
+  }
 }

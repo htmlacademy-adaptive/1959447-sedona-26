@@ -1,34 +1,63 @@
-.info {
-  margin-top: -40px;
-}
-
 .info__container {
-  background: #ffffff url("../img/back-mobile.jpg");
+  background: @colorBasicBlue url("../img/back-mobile.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   padding-top: 90px;
+
+  @media (min-width: @vTabletWidth) {
+    padding-top: 78px;
+  }
 }
 
 .info__description {
-  background-color: #ffffff;
-  padding: 33px 28px 30px 22px;
+  background-color: @colorWhite;
+  padding: 58px 28px 27px 22px;
+  clip-path: polygon(0 0, 50% 15%, 100% 0, 100% 100%, 0 100%);
+
+  @media (min-width: @vTabletWidth) {
+    padding: 103px 124px 27px;
+    clip-path: polygon(0 11%, 4% 13%, 4% 0, 50% 31%, 96% 0, 96% 13%, 100% 11%, 100% 100%, 0 100%);
+  }
+
+  @media (min-width: @vDesktopWidth) {
+    clip-path: polygon(0 0%, 21% 16%, 21% 0, 50% 36%, 79% 0, 79% 16%, 100% 0%, 100% 100%, 0 100%);
+    padding-top: 114px;
+  }
 }
 
 .info__description-text {
   margin: 0 auto;
   font-weight: 700;
   font-size: 18px;
-  line-height: 1.44;
+  line-height: 1.5;
   text-transform: uppercase;
-  color: #000000;
+  color: @colorBlackDark;
   text-align: center;
+
+  @media (min-width: @vTabletWidth) {
+    font-size: 21px;
+    line-height: 1.24;
+  }
+
+  @media (min-width: @vDesktopWidth) {
+    width: 60%;
+  }
 }
 
 .info__slogan {
-  padding-bottom: 80px;
+  padding-bottom: 59px;
+
+  @media (min-width: @vTabletWidth) {
+    padding-bottom: 33px;
+  }
 }
 
 .info__slogan-img {
   margin: 0 auto;
   display: block;
+
+  @media (min-width: @vTabletWidth) {
+    width: 461px;
+    height: 350px;
+  }
 }

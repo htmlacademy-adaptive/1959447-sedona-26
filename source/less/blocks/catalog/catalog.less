@@ -1,9 +1,11 @@
-.catalog__header {
-  margin-top: -40px;
-}
+.catalog__intro {
+  padding-bottom: 48px;
 
-.catalog__photo {
-  padding-top: 37px;
+  @media (min-width: @vTabletWidth) {
+    padding-left: 150px;
+    padding-right: 150px;
+    padding-bottom: 63px;
+  }
 }
 
 .catalog__title {
@@ -12,16 +14,32 @@
   font-size: 18px;
   line-height: 1.44;
   text-transform: uppercase;
-  margin-bottom: 35px;
+  margin-bottom: 32px;
+
+  @media (min-width: @vTabletWidth) {
+    font-size: 30px;
+    line-height: 0.87;
+  }
 }
 
 .catalog__description {
   margin: 0;
   text-transform: uppercase;
-  margin-bottom: 48px;
 
   &--video {
     margin-left: 15px;
     margin-right: 15px;
+
+    @media (min-width: @vTabletWidth) {
+      margin-bottom: 60px;
+    }
+  }
+}
+
+.catalog__photo {
+  padding-top: 37px;
+
+  @media (min-width: @vTabletWidth) {
+    padding-top: 47px;
   }
 }

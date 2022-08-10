@@ -1,4 +1,16 @@
+.address {
+  background-image: url("./img/map-backgrond.jpg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: auto;
+}
+
 .address__map {
   display: block;
   border: none;
+  width: 100%;
+
+  @media (min-width: @vTabletWidth) {
+    min-height: 350px;
+  }
 }

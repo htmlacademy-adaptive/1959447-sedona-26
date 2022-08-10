@@ -1,6 +1,6 @@
 .advantages {
-  background-color: #eeeeee;
-  padding-bottom: 30px;
+  background-color: @colorBasicBlue;
+  margin-top: -1px;
 }
 
 .advantages__text {
@@ -16,29 +16,37 @@
   padding: 0;
   margin: 0;
   counter-reset: orderedlist;
+  background-color: @colorBasicGrey;
+
+  @media (min-width: @vTabletWidth) {
+    padding-bottom: 39px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
 }
 
 .advantages__box {
   position: relative;
   display: block;
-  padding-bottom: 30px;
+  padding-bottom: 52px;
   padding-left: 17px;
   padding-right: 20px;
   padding-top: 8px;
-  background-color: #ffffff;
-}
+  background-color: @colorWhite;
+  clip-path: polygon(0 0, 100% 0, 100% 85%, 50% 100%, 0 85%);
 
-.advantages__box::after {
-  content: "";
-  background-color: #ffffff;
-  width: 100%;
-  height: 26px;
-  position: absolute;
-  bottom: -25px;
-  left: 0;
-  clip-path: polygon(100% 0, 50% 100%, 0 0);
-}
+  @media (min-width: @vTabletWidth) {
+    padding-left: 21px;
+    padding-top: 3px;
+    padding-bottom: 56px;
+    clip-path: none;
+  }
 
+  @media (min-width: @vDesktopWidth) {
+    padding-bottom: 46px;
+  }
+}
 
 .advantages__name {
   font-weight: 700;
@@ -47,37 +55,158 @@
   text-transform: uppercase;
   margin: 0 auto;
   text-align: center;
-  margin-bottom: 50px;
+  margin-bottom: 11px;
 
   &--color {
-    color: #ffffff;
+    color: @colorWhite;
+  }
+
+  @media (min-width: @vTabletWidth) {
+    font-size: 21px;
+    line-height: 1.24;
+    margin-bottom: 14px;
+    width: 50%;
+
+    &--color {
+      width: auto;
+    }
+  }
+
+  @media (min-width: @vDesktopWidth) {
+    &--color {
+      margin-left: 40px;
+      margin-right: 40px;
+    }
   }
 }
 
 .advantages__item {
-  padding-top: 56px;
+  text-align: center;
+  padding-top: 27px;
+  padding-left: 35px;
+  padding-right: 35px;
+  padding-bottom: 24px;
+  position: relative;
 
   &--color {
-    background-color: #81b3d2;
+    background-color: @colorBasicBlue;
+    padding-top: 34px;
+    padding-left: 0;
+    padding-right: 0;
+    padding-bottom: 0;
+  }
+
+  @media (min-width: @vTabletWidth) {
+    padding-top: 41px;
+    width: 256px;
+    padding-left: 0;
+    padding-right: 0;
+
+    &--color {
+      width: 100%;
+      padding-top: 0;
+    }
+  }
+}
+
+.advantages__item:not(.advantages__item--color):not(:last-child)::after {
+  content: "";
+  position: absolute;
+  width: 90vw;
+  height: 1px;
+  background-color: @colorBorderGrey;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+
+  @media (min-width: @vTabletWidth) {
+    display: none;
   }
 }
 
 .advantages__description {
-  font-weight: 700;
-  text-align: center;
   text-transform: uppercase;
   margin: 0;
 
   &--color {
-    color: #ffffff;
+    color: @colorWhite;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  @media (min-width: @vTabletWidth) {
+    margin-left: 33px;
+    margin-right: 33px;
+
+    &--color {
+      margin-top: 23px;
+      margin-left: 0;
+      margin-right: 0;
+    }
   }
 }
 
 .advantages__image {
   display: block;
   margin-top: 38px;
+  width: 100%;
+
+  @media (min-width: @vTabletWidth) {
+    margin-top: 0;
+    min-height: 256px;
+  }
 }
 
-// .advantages__secondary {
-//   margin: 0 -20px;
-// }
+.advantages__item-wrapper {
+  @media (min-width: @vTabletWidth) {
+    display: flex;
+  }
+}
+
+.advantages__item-text {
+  padding-left: 11px;
+  padding-right: 18px;
+
+  @media (min-width: @vTabletWidth) {
+    padding: 40px 20px 0;
+  }
+
+  @media (min-width: @vDesktopWidth) {
+    padding: 47px 52px 0;
+  }
+}
+
+.advantages__order {
+  line-height: 1.5;
+  margin: 0;
+  display: block;
+  margin-bottom: 17px;
+
+  @media (min-width: @vTabletWidth) {
+    margin-bottom: 24px;
+  }
+}
+
+.advantages__item--color .advantages__order {
+  color: @colorWhite;
+}
+
+.advantages__item .image-wrapper {
+  @media (min-width: @vTabletWidth) {
+    flex: 0 0 512px;
+    margin-left: auto;
+
+    &--order {
+      order: -1;
+      margin-right: auto;
+    }
+  }
+
+  @media (min-width: @vDesktopWidth) {
+    flex: 0 0 800px;
+
+    &--order {
+      margin-left: 0;
+    }
+  }
+}
