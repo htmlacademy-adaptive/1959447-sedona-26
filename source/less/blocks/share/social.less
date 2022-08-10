@@ -2,6 +2,7 @@
   list-style: none;
   display: flex;
   justify-content: center;
+  align-items: center;
   padding: 0;
 }
 
@@ -16,4 +17,16 @@
 .social__item {
   margin-right: 3px;
   margin-left: 3px;
+  display: flex;
+  justify-content: center;
+
+  @media (min-width: @vTabletWidth) {
+    margin-left: 0;
+    margin-right: 5px;
+  }
+}
+
+.social__link-svg {
+  width: 24px;
+  height: 24px;
 }
