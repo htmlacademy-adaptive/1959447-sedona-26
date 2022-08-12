@@ -10,7 +10,7 @@
 </head>
 
 <body class="page__body">
-  <header class="header header--inner header--opened">
+  <header class="header header--inner">
     <div class="header__wrapper">
       <div class="header__logo">
         <a class="header__logo-link">
@@ -18,7 +18,7 @@
         </a>
       </div>
 
-      <button class="header__toggle" type="button">
+      <button class="header__toggle header__toggle--closed" type="button">
         <span class="visually-hidden">Открыть меню</span>
       </button>
 
@@ -64,9 +64,9 @@
 
         <form class="form__feedback feedback">
           <fieldset class="feedback__group feedback__group--person">
-            <legend class="feedback__title">Представьтесь:</legend>
+            <h4 class="feedback__title">Представьтесь:</h4>
             <div class="feedback__item person-info">
-              <label class="person-info__name">Имя*:</label>
+              <label class="person-info__name feedback__label">Имя*:</label>
               <input class="person-info__input feedback__input" type="text" required name="name" placeholder="Пётр" />
             </div>
             <div class="feedback__item person-info">
@@ -82,69 +82,76 @@
           </fieldset>
 
           <fieldset class="feedback__group feedback__group--person">
-            <legend class="feedback__title">Контактная информация:</legend>
+            <h4 class="feedback__title">Контактная информация:</h4>
             <div class="feedback__item contact">
               <label class="contact__name feedback__label">Контактный телефон*:</label>
               <input class="contact__input feedback__input" type="tel" name="telephone number" required
                 placeholder="Введите телефон" />
             </div>
-            <div class="feedback__item contact">
+            <div class="feedback__item contact feedback__item--pixelPerfect">
               <label class="contact__name feedback__label">Электронная почта*:</label>
               <input class="contact__input feedback__input" type="email" name="email" required
                 placeholder="Введите e-mail" />
             </div>
           </fieldset>
 
-          <fieldset class="feedback__group">
-            <legend class="feedback__title">Ваше oбщее впечатление:</legend>
+          <fieldset class="feedback__group feedback__group--control">
+            <h4 class="feedback__title">Ваше oбщее впечатление:</h4>
             <ul class="feedback__list control feedback__radio">
               <li class="feedback__item control__item">
                 <label class="control__label radio">
                   <input class="control__input" type="radio" name="impression" value="positive" checked />
+                  <span class="control__checkbox control__checkbox--radio"></span>
                   <span class="control__text">Скорее положительное</span>
                 </label>
               </li>
               <li class="feedback__item control__item">
                 <label class="control__label radio">
                   <input class="control__input" type="radio" name="impression" value="negative" />
+                  <span class="control__checkbox control__checkbox--radio"></span>
                   <span class="control__text">Скорее отрицательное</span>
                 </label>
               </li>
               <li class="feedback__item control__item">
                 <label class="control__label radio">
                   <input class="control__input" type="radio" name="impression" value="no reply" />
+                  <span class="control__checkbox control__checkbox--radio"></span>
                   <span class="control__text">Затрудняюсь ответить</span>
                 </label>
               </li>
             </ul>
           </fieldset>
 
-          <fieldset class="feedback__group">
-            <legend class="feedback__title">
+          <fieldset class="feedback__group feedback__group--control">
+            <h4 class="feedback__title feedback__title--variation">
               Посещенные достопримечательности:
-            </legend>
-            <ul class="feedback__list control feedback__checkbox">
-              <li class="feedback__item">
+            </h4>
+            <ul class="feedback__list control control--checkbox">
+              <li class="feedback__item control__item">
                 <label class="control__label checkbox">
                   <input class="control__input" type="checkbox" name="landmark" value="bridge" checked />
+                  <span class="control__checkbox control__checkbox--check"></span>
                   <span class="control__text">Мост Дьявола</span>
                 </label>
               </li>
-              <li class="feedback__item">
+              <li class="feedback__item control__item">
                 <label class="control__label checkbox">
                   <input class="control__input" type="checkbox" name="landmark" value="mountain" checked />
+                  <span class="control__checkbox control__checkbox--check"></span>
                   <span class="control__text">Гора-Колокол</span>
                 </label>
               </li>
-              <li class="feedback__item">
+              <li class="feedback__item control__item">
                 <label class="control__label checkbox">
                   <input class="control__input" type="checkbox" name="landmark" value="park" checked />
+                  <span class="control__checkbox control__checkbox--check"></span>
                   <span class="control__text">Слайд-парк</span>
                 </label>
               </li>
-              <li class="feedback__item">
+              <li class="feedback__item control__item">
                 <label class="control__label checkbox">
                   <input class="control__input" type="checkbox" name="landmark" value="rock" />
+                  <span class="control__checkbox control__checkbox--check"></span>
                   <span class="control__text">Красные скалы</span>
                 </label>
               </li>
@@ -152,7 +159,7 @@
           </fieldset>
 
           <fieldset class="feedback__group">
-            <legend class="feedback__title">Опишите свои эмоции:</legend>
+            <h4 class="feedback__title">Опишите свои эмоции:</h4>
             <textarea class="feedback__item review" name="review">
 Опишите подробно все свои восторги </textarea>
           </fieldset>

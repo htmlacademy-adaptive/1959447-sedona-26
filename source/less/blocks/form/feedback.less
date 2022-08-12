@@ -6,6 +6,10 @@
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 26px;
+    padding-bottom: 35px;
   }
 }
 
@@ -13,10 +17,17 @@
   border: none;
   padding: 0;
   margin: 0;
-  margin-top: 29px;
+  padding-bottom: 24px;
+  position: relative;
+
+  &--control {
+    padding-bottom: 9px;
+  }
 
   @media (min-width: @vTabletWidth) {
     width: 100%;
+    padding-top: 48px;
+    padding-bottom: 0;
 
     &--person {
       width: 50%;
@@ -24,13 +35,32 @@
     }
 
     &:first-child {
-      padding-right: 40px;
+      padding-right: 43px;
       border-right: 2px solid @colorSpecialGrey;
     }
 
-    &:last-of-type {
-      margin-bottom: 20px;
+    &:nth-child(2) {
+      padding-left: 26px;
     }
+
+    &:last-of-type {
+      padding-top: 42px;
+    }
+  }
+}
+
+.feedback__group:not(:last-of-type)::after {
+  content: "";
+  height: 1px;
+  background-color: @colorBorderGrey;
+  width: 100vw;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+
+  @media (min-width: @vTabletWidth) {
+    display: none;
   }
 }
 
@@ -45,13 +75,50 @@
   @media (min-width: @vTabletWidth) {
     font-size: 21px;
     line-height: 1.24;
+    margin: 0 auto;
+    margin-bottom: 28px;
+    position: relative;
+
+    &--variation {
+      padding-left: 170px;
+      padding-right: 172px;
+    }
   }
+}
+
+.feedback__title::before,
+.feedback__title::after {
+  @media (min-width: @vTabletWidth) {
+    content: "";
+    width: 123px;
+    height: 1px;
+    background-color: @colorBorderGrey;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+
+    .feedback__group--person & {
+      display: none;
+    }
+  }
+}
+
+.feedback__title::before {
+  left: 0;
+}
+
+.feedback__title::after {
+  right: 0;
 }
 
 .feedback__item {
   display: flex;
   flex-wrap: wrap;
   margin-bottom: 16px;
+
+  &--pixelPerfect {
+    margin-bottom: 12px;
+  }
 }
 
 .feedback__input {
@@ -59,6 +126,7 @@
   padding: 16px;
   border: none;
   background-color: #f2f2f2;
+  font-family: inherit;
   font-weight: 700;
   font-size: 18px;
   line-height: 1.44;

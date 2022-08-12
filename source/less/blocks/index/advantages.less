@@ -1,5 +1,4 @@
 .advantages {
-  background-color: @colorBasicBlue;
   margin-top: -1px;
 }
 
@@ -22,7 +21,11 @@
     padding-bottom: 39px;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: center;
+  }
+
+  @media (min-width: @vDesktopWidth) {
+    column-gap: 122px;
   }
 }
 

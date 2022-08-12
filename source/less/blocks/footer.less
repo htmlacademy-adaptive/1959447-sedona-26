@@ -1,5 +1,16 @@
+.footer {
+  @media (min-width: @vDesktopWidth) {
+    box-shadow: -15px 0 15px rgba(0, 1, 1, 0.1),
+      15px 0 15px rgba(0, 1, 1, 0.1);
+
+    &--inner {
+      box-shadow: none;
+    }
+  }
+}
+
 .footer__container {
-  padding-top: 42px;
+  padding-top: 27px;
   padding-bottom: 20px;
   text-align: center;
 
@@ -10,6 +21,18 @@
     padding-top: 35px;
     padding-left: 60px;
     padding-right: 60px;
+  }
+
+  @media (min-width: @vDesktopWidth) {
+    background-color: @colorWhite;
+    padding-left: 120px;
+    padding-right: 120px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+
+    .footer--inner & {
+      padding-top: 67px;
+    }
   }
 }
 

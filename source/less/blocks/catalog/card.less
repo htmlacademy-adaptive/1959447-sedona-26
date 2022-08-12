@@ -1,14 +1,60 @@
 .card {
+  position: relative;
+  padding-top: 24px;
+
+  &:last-child {
+    padding-bottom: 24px;
+  }
+
   @media (min-width: @vTabletWidth) {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    background-color: @colorBasicGrey;
+    background-color: @colorSpecialGrey;
+    padding-top: 0;
+
+    &:nth-child(odd):not(:first-child) {
+      background-color: @colorBackgroundGrey;
+    }
+
+    &:last-child {
+      padding-bottom: 0;
+    }
   }
 
   @media (min-width: @vDesktopWidth) {
     display: grid;
     grid-template-columns: 1fr 1fr;
+  }
+}
+
+.card::before {
+  content: "";
+  height: 1px;
+  background-color: @colorBorderGrey;
+  width: 100vw;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+
+  @media (min-width: @vTabletWidth) {
+    display: none;
+  }
+}
+
+.card:last-child::after {
+  content: "";
+  height: 1px;
+  background-color: @colorBorderGrey;
+  width: 100vw;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+
+  @media (min-width: @vTabletWidth) {
+    display: none;
   }
 }
 
@@ -19,6 +65,8 @@
 
   @media (min-width: @vTabletWidth) {
     grid-column: 1/-1;
+    height: 267px;
+    background-size: contain;
   }
 
   @media (min-width: @vDesktopWidth) {
@@ -67,12 +115,13 @@
 .card__author {
   margin: 0;
   text-align: left;
-  margin-bottom: 11px;
+  margin-bottom: 18px;
 
   @media (min-width: @vTabletWidth) {
     grid-column: 1/2;
     grid-row: 3/4;
     margin-left: 20px;
+    margin-bottom: 14px;
   }
 
   @media (min-width: @vDesktopWidth) {
@@ -83,6 +132,10 @@
 .card__like {
   display: flex;
   margin-bottom: 25px;
+
+  .card:last-child & {
+    margin-bottom: 2px;
+  }
 
   @media (min-width: @vTabletWidth) {
     margin-left: auto;

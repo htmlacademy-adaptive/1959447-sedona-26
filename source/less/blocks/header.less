@@ -2,13 +2,13 @@
   position: relative;
   background-color: @colorWhite;
 
+  @media (min-width: @vDesktopWidth) {
+    box-shadow: -15px 0 15px rgba(0, 1, 1, 0.1),
+      15px 0 15px rgba(0, 1, 1, 0.1);
+  }
+
   &--inner {
     z-index: 1;
-
-    @media (min-width: @vTabletWidth) {
-      padding-left: 28px;
-      padding-right: 28px;
-    }
   }
 }
 
@@ -38,7 +38,7 @@
   }
 
   @media (min-width: @vDesktopWidth) {
-    padding-top: 7px;
+    padding-top: 9px;
   }
 }
 
