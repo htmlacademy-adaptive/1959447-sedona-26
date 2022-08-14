@@ -5,3 +5,12 @@
     background-color: @colorBasicGrey;
   }
 }
+
+.page__wrapper {
+  @media (min-width: @vDesktopWidth) {
+    max-width: @vDesktopWidth;
+    margin: 0 auto;
+    box-shadow: -15px 0 15px rgba(0, 1, 1, 0.1),
+      15px 0 15px rgba(0, 1, 1, 0.1);
+  }
+}
