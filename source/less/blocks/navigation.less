@@ -29,6 +29,19 @@
   box-shadow: 0 1px 0 rgba(1, 1, 1, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.2);
   background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.2) 100%);
 
+  &:hover {
+    background-color: @colorDarkBlue;
+  }
+
+  &:active {
+    color: rgba(255, 255, 255, 0.3);
+    background-color: @colorSpecialBlue;
+  }
+
+  &:disabled {
+    background-color: @colorControlGrey;
+  }
+
   @media (min-width: @vTabletWidth) {
     font-size: 14px;
     line-height: 1.5;
