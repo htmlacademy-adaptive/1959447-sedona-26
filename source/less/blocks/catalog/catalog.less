@@ -20,41 +20,18 @@
 }
 
 .catalog__title {
-  margin: 0;
-  font-weight: 700;
-  font-size: 18px;
-  line-height: 1.44;
-  text-transform: uppercase;
+  .fontTitle;
   margin-bottom: 26px;
 
   @media (min-width: @vTabletWidth) {
-    font-size: 30px;
-    line-height: 0.87;
     margin-bottom: 32px;
   }
 }
 
 .catalog__description {
-  margin: 0;
-  text-transform: uppercase;
-
-  &--video {
-    margin-left: 23px;
-    margin-right: 23px;
-    margin-bottom: 39px;
-
-    @media (min-width: @vTabletWidth) {
-      margin-bottom: 90px;
-      margin-left: 100px;
-      margin-right: 100px;
-    }
-
-    @media (min-width: @vDesktopWidth) {
-      margin-left: 175px;
-      margin-right: 175px;
-    }
-  }
+  .fontDescription;
 }
+
 
 .catalog__photo {
   padding-top: 34px;

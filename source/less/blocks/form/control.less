@@ -1,4 +1,5 @@
 .control {
+  list-style: none;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -10,11 +11,6 @@
     padding-left: 35px;
     padding-right: 20px;
     row-gap: 17px;
-
-    &--checkbox {
-      padding-left: 84px;
-      padding-right: 54px;
-    }
   }
 
   @media (min-width: @vDesktopWidth) {
@@ -23,15 +19,12 @@
     row-gap: 0;
     padding-left: 52px;
     padding-right: 25px;
-
-    &--checkbox {
-      padding-left: 43px;
-      padding-right: 18px;
-    }
   }
 }
 
 .control__item {
+  margin-bottom: 16px;
+
   @media (min-width: @vTabletWidth) {
     width: 50%;
     margin-bottom: 0;
@@ -55,39 +48,29 @@
   background-color: @colorControlGrey;
 }
 
-.control__label:active {
-  .control__checkbox {
-    background-color: @colorActiveGrey;
-  }
+.control__label:active .control__checkbox {
+  background-color: @colorActiveGrey;
+}
 
-  .control__checkbox::before {
-    opacity: 0.3;
-  }
+.control__label:active .control__checkbox::before {
+  opacity: 0.3;
 }
 
 .control__label:focus-within .control__checkbox {
   background-color: @colorControlGrey;
 }
 
-.control__input {
-  position: absolute;
-  z-index: -1;
-  opacity: 0;
-}
-
-.control__checkbox {
+.control__button {
   width: 46px;
   height: 46px;
   background-color: @colorSpecialGrey;
   margin-right: 16px;
   position: relative;
-
-  &--radio {
-    border-radius: 50%;
-  }
+  border-radius: 50%;
+  display: flex;
 }
 
-.control__checkbox--radio::before {
+.control__button::before {
   content: "";
   width: 16px;
   height: 16px;
@@ -100,22 +83,6 @@
   display: none;
 }
 
-.control__input:checked + .control__checkbox--radio::before {
-  display: block;
-}
-
-.control__checkbox--check::before {
-  content: "";
-  width: 22px;
-  height: 16px;
-  background-image: url("../img/icon/tick.svg");
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  display: none;
-}
-
-.control__input:checked + .control__checkbox--check::before {
+.control__input:checked + .control__button::before {
   display: block;
 }

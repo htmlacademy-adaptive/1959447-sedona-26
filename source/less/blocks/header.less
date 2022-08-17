@@ -1,6 +1,7 @@
 .header {
   position: relative;
   background-color: @colorWhite;
+  min-height: 56px;
 
   &--inner {
     z-index: 1;
@@ -21,6 +22,7 @@
   text-align: right;
   padding-top: 14px;
   padding-bottom: 17px;
+  position: relative;
 
   @media (min-width: @vTabletWidth) {
     display: flex;
@@ -52,52 +54,4 @@
   left: 50%;
   transform: translate(-50%);
   top: 0;
-}
-
-.header__toggle {
-  cursor: pointer;
-  margin-right: 20px;
-  position: relative;
-  width: 23px;
-  height: 23px;
-  background-color: inherit;
-  border: none;
-
-  @media (min-width: @vTabletWidth) {
-    display: none;
-  }
-}
-
-.header__toggle::before {
-  content: "";
-  width: 23px;
-  height: 4px;
-  position: absolute;
-  display: block;
-  top: 0;
-  left: 0;
-  background-color: @colorBasicBlue;
-  box-shadow: 0 9px 0 0 @colorBasicBlue, 0 18px 0 0 @colorBasicBlue;
-
-  .header--opened & {
-    display: none;
-  }
-}
-
-.header__toggle--opened::after {
-  content: "";
-  width: 23px;
-  height: 23px;
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  left: 280px;
-  background-image: url("../img/icon/icon-cross.svg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  display: none;
-
-  .header--opened & {
-    display: block;
-  }
 }

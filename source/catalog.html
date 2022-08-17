@@ -6,6 +6,9 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="css/style.css" />
+  <link rel="icon" href="img/favicon/32.png"> <!-- 32×32 -->
+  <link rel="icon" href="img/favicon/152.svg" type="image/svg+xml">
+  <link rel="manifest" href="manifest.webmanifest">
   <title>Фото и видео</title>
 </head>
 
@@ -16,29 +19,32 @@
     <header class="header header--inner">
       <div class="header__wrapper">
         <div class="header__logo">
-          <a class="header__logo-link">
+          <a class="header__logo-link" href="index.html">
             <img class="header__logo-img" width="185" height="96" src="img/logo.svg" alt="Логотип города Седона." />
           </a>
         </div>
 
-        <button class="header__toggle header__toggle--opened" type="button">
-          <span class="visually-hidden">Открыть меню</span>
-        </button>
+        <input id="toggle" class="toggle visually-hidden" type="checkbox">
+        <label for="toggle" class="header__toggle hamburger">
+          <span class="hamburger__line hamburger__line--top"></span>
+          <span class="hamburger__line hamburger__line--meat"></span>
+          <span class="hamburger__line hamburger__line--bottom"></span>
+        </label>
 
         <div class="header__dropdown">
           <nav class="header__nav navigation">
             <ul class="navigation__list">
               <li class="navigation__item">
-                <a class="navigation__link link" href="index.html">Главная</a>
+                <a class="navigation__link" href="index.html">Главная</a>
               </li>
               <li class="navigation__item">
-                <a class="navigation__link link navigation__link--current">Фото и видео</a>
+                <a class="navigation__link navigation__link--current">Фото и видео</a>
               </li>
               <li class="navigation__item">
-                <a class="navigation__link link" href="form.html">Форма отзыва</a>
+                <a class="navigation__link" href="form.html">Форма отзыва</a>
               </li>
               <li class="navigation__item">
-                <a class="navigation__link link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
+                <a class="navigation__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
               </li>
             </ul>
           </nav>
@@ -147,15 +153,13 @@
       </section>
 
       <section class="catalog__video video">
-        <div>
           <h2 class="visually-hidden">Видеопрезентация города Седона</h2>
-          <p class="catalog__title">Все еще сомневаетесь?</p>
-          <p class="catalog__description catalog__description--video">
+          <p class="video__title">Все еще сомневаетесь?</p>
+          <p class="video__description">
             Смотрите видеопрезентацию и скорее за билетами, пока они не
             подорожали в очередной раз!
           </p>
           <video class="video__content" controls poster="img/video-mobile.jpg"></video>
-        </div>
       </section>
     </main>
 
@@ -166,8 +170,8 @@
         </a>
 
         <ul class="footer__list social">
-          <li class="social__item social__item--vk">
-            <a class="social__link link social__link--vk" href="https://vk.com/htmlacademy" title="Наш Вконтакте">
+          <li class="social__item">
+            <a class="social__link social__link--vk" href="https://vk.com/htmlacademy" title="Наш Вконтакте">
               <svg class="social__link-svg" width="22" height="12" viewBox="0 0 22 12">
                 <use xlink:href="#icon-vk"></use>
               </svg>
@@ -175,16 +179,16 @@
             </a>
           </li>
 
-          <li class="social__item social__item--tm">
-            <a class="social__link link social__link--tm" href="tg://resolve?domain=htmlacademy" title="Наш Телеграм">
+          <li class="social__item">
+            <a class="social__link social__link--tm" href="tg://resolve?domain=htmlacademy" title="Наш Телеграм">
               <svg class="social__link-svg" width="22" height="20" viewBox="0 0 22 20">
                 <use xlink:href="#icon-tm"></use>
               </svg>
               <span class="visually-hidden">Telegram</span></a>
           </li>
 
-          <li class="social__item social__item--you">
-            <a class="social__link link social__link--youtube" href="https://www.youtube.com/user/htmlacademyru"
+          <li class="social__item">
+            <a class="social__link social__link--youtube" href="https://www.youtube.com/user/htmlacademyru"
               title="Наш канал на YouTube">
               <svg class="social__link-svg" width="22" height="16" viewBox="0 0 22 16">
                 <use xlink:href="#icon-youtube"></use>
@@ -194,7 +198,7 @@
         </ul>
         <div class="footer__copyright copyright">
           <p class="copyright__text">Разработано</p>
-          <a class="copyright__link link" href="https://htmlacademy.ru/intensive/adaptive"><span
+          <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive"><span
               class="visually-hidden">HTML Academy</span>
             <img class="copyright__logo" src="img/icon/htmlacademy.svg" alt="Логотип HTML Academy" />
           </a>
