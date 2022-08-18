@@ -28,16 +28,11 @@
   padding-bottom: 12px;
   display: block;
   box-shadow: 0 1px 0 rgba(1, 1, 1, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.2);
-  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.2) 100%);
-
-  &:hover {
-    background-color: @colorDarkBlue;
-  }
-
-  &:active {
-    color: rgba(255, 255, 255, 0.3);
-    background-color: @colorSpecialBlue;
-  }
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 0.2) 100%
+  );
 
   &:disabled {
     background-color: @colorControlGrey;
@@ -59,6 +54,25 @@
   }
 }
 
+.navigation__link:hover {
+  background-color: @colorDarkBlue;
+
+  @media (min-width: @vTabletWidth) {
+    color: @colorBasicBlue;
+    background-color: rgba(255, 255, 255, 0);
+  }
+}
+
+.navigation__link:active {
+  color: rgba(255, 255, 255, 0.3);
+  background-color: @colorSpecialBlue;
+
+  @media (min-width: @vTabletWidth) {
+    background-color: rgba(255, 255, 255, 0);
+    color: @colorActiveGrey;
+  }
+}
+
 .navigation__item {
   width: 100%;
   background-color: @colorBasicBlue;
@@ -73,7 +87,7 @@
   }
 }
 
-.navigation__list .navigation__item:nth-child(4n+3) {
+.navigation__list .navigation__item:nth-child(4n + 3) {
   @media (min-width: @vTabletWidth) {
     margin-left: auto;
   }

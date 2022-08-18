@@ -75,7 +75,15 @@
 
         <ul class="gallery__list">
           <li class="gallery__item card card--popular">
-            <img class="card__image" src="img/photo-1-mobile.jpg" width="280" height="280" alt="" />
+            <div class="card__image-wrapper">
+              <picture>
+                <source media="(min-width: 1280px)" srcset="img/photo-1-desktop.jpg 1x, img/photo-1-desktop@2.jpg 2x">
+                <source media="(min-width: 768px)" srcset="img/photo-1-tablet.jpg 1x, img/photo-1-tablet@2.jpg 2x">
+                <img class="card__image" src="img/photo-1-mobile.jpg" srcset="img/photo-1-mobile@2.jpg 2x" width="280"
+                  height="280" alt="Фото Неродные просторы." />
+              </picture>
+            </div>
+
             <div class="card__description">
               <div class="card__title">
                 <h3 class="card__name">Неродные просторы</h3>
@@ -94,7 +102,14 @@
           </li>
 
           <li class="gallery__item card">
-            <img class="card__image" src="img/photo-2-mobile.jpg" width="280" height="280" alt="" />
+            <div class="card__image-wrapper">
+              <picture>
+                <source media="(min-width: 1280px)" srcset="img/photo-2-desktop.jpg 1x, img/photo-2-desktop@2.jpg 2x">
+                <source media="(min-width: 768px)" srcset="img/photo-2-tablet.jpg 1x, img/photo-2-tablet@2.jpg 2x">
+                <img class="card__image" src="img/photo-2-mobile.jpg" srcset="img/photo-2-mobile@2.jpg 2x" width="280" height="280"
+                  alt="Фото Местная растительность." />
+              </picture>
+            </div>
             <div class="card__description">
               <div class="card__title">
                 <h3 class="card__name">Местная растительность</h3>
@@ -113,7 +128,14 @@
           </li>
 
           <li class="gallery__item card">
-            <img class="card__image" src="img/photo-3-mobile.jpg" width="280" height="280" alt="" />
+
+            <picture>
+              <source media="(min-width: 1280px)" srcset="img/photo-3-desktop.jpg 1x, img/photo-3-desktop@2.jpg 2x">
+              <source media="(min-width: 768px)" srcset="img/photo-3-tablet.jpg 1x, img/photo-3-tablet@2.jpg 2x">
+              <img class="card__image" src="img/photo-3-mobile.jpg" srcset="img/photo-3-mobile@2.jpg 2x" width="280" height="280"
+              alt="Фото Дорога на север." />
+            </picture>
+
             <div class="card__description">
               <div class="card__title">
                 <h3 class="card__name">Дорога на север</h3>
@@ -132,7 +154,13 @@
           </li>
 
           <li class="gallery__item card">
-            <img class="card__image" src="img/photo-4.jpg" width="280" height="280" alt="" />
+
+            <picture>
+              <source media="(min-width: 1280px)" srcset="img/photo-4-desktop.jpg 1x, img/photo-4-desktop@2.jpg 2x">
+              <source media="(min-width: 768px)" srcset="img/photo-4-tablet.jpg 1x, img/photo-4-tablet@2.jpg 2x">
+              <img class="card__image" src="img/photo-4-mobile.jpg" srcset="img/photo-4-mobile@2.jpg 2x" width="280" height="280" alt="Фото Мост дьявола." />
+            </picture>
+
             <div class="card__description">
               <div class="card__title">
                 <h3 class="card__name">Мост дьявола</h3>
@@ -153,13 +181,13 @@
       </section>
 
       <section class="catalog__video video">
-          <h2 class="visually-hidden">Видеопрезентация города Седона</h2>
-          <p class="video__title">Все еще сомневаетесь?</p>
-          <p class="video__description">
-            Смотрите видеопрезентацию и скорее за билетами, пока они не
-            подорожали в очередной раз!
-          </p>
-          <video class="video__content" controls poster="img/video-mobile.jpg"></video>
+        <h2 class="visually-hidden">Видеопрезентация города Седона</h2>
+        <p class="video__title">Все еще сомневаетесь?</p>
+        <p class="video__description">
+          Смотрите видеопрезентацию и скорее за билетами, пока они не
+          подорожали в очередной раз!
+        </p>
+        <video class="video__content" controls poster="img/video-mobile.jpg"></video>
       </section>
     </main>
 
@@ -198,8 +226,8 @@
         </ul>
         <div class="footer__copyright copyright">
           <p class="copyright__text">Разработано</p>
-          <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive"><span
-              class="visually-hidden">HTML Academy</span>
+          <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive"><span class="visually-hidden">HTML
+              Academy</span>
             <img class="copyright__logo" src="img/icon/htmlacademy.svg" alt="Логотип HTML Academy" />
           </a>
         </div>

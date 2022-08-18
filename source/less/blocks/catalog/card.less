@@ -23,8 +23,7 @@
   }
 
   @media (min-width: @vDesktopWidth) {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    position: relative;
   }
 }
 
@@ -71,14 +70,17 @@
 
   @media (min-width: @vDesktopWidth) {
     min-height: 260px;
-    grid-row: 1/3;
   }
 }
 
 .card--popular .card__image {
   @media (min-width: @vTabletWidth) {
     min-height: 400px;
-    width: 100%;
+  }
+
+  @media (min-width: @vDesktopWidth) {
+    width: 1200px;
+    height: 400px;
   }
 }
 
@@ -89,12 +91,15 @@
   }
 
   @media (min-width: @vDesktopWidth) {
-    grid-column: 1/-1;
-    grid-row: 2/3;
     color: @colorWhite;
-    background-color: rgba(0, 0, 0, 0.3);
     padding-top: 22px;
     padding-bottom: 15px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding-left: 20px;
+    padding-right: 20px;
+    background-color: rgba(0, 0, 0, 0.3);
   }
 }
 
@@ -109,6 +114,10 @@
   @media (min-width: @vTabletWidth) {
     margin-left: 20px;
     margin-top: 23px;
+  }
+
+  @media (min-width: @vDesktopWidth) {
+    margin: 0;
   }
 }
 
@@ -125,7 +134,7 @@
   }
 
   @media (min-width: @vDesktopWidth) {
-    margin-bottom: 0;
+    margin: 0;
   }
 }
 
