@@ -159,19 +159,43 @@
   }
 }
 
+.feedback__input-wrapper {
+  display: flex;
+  position: relative;
+  width: 100%;
+
+  @media (min-width: @vDesktopWidth) {
+    max-width: 430px;
+  }
+}
+
 .feedback__input {
   width: 100%;
   padding: 16px;
   border: none;
-  background-color: #f2f2f2;
+  background-color: @colorSpecialGrey;
   font-family: inherit;
   font-weight: 700;
   font-size: 18px;
   line-height: 1.44;
 
-  @media (min-width: @vDesktopWidth) {
-    max-width: 430px;
+  &:hover {
+    outline: none;
+    background-color: @colorControlGrey;
+
+    &::placeholder {
+      color: @colorBlackDark;
+    }
   }
+
+  &:active {
+    outline: 4px solid @colorControlGrey;
+    background-color: @colorWhite;
+  }
+}
+
+.feedback__input::placeholder {
+  color: rgba(0, 0, 0, 0.3);
 }
 
 .feedback__label {
@@ -179,9 +203,27 @@
   margin-left: 16px;
 }
 
-
 .feedback__group--person .feedback__title {
   @media (min-width: @vDesktopWidth) {
     margin-left: 10px;
   }
+}
+
+.feedback__input-icon {
+  height: 100%;
+  background-color: @colorButtonGrey;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 58px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.feedback__input-icon--tel {
+  background-image: url("/img/icon/phone.svg");
+}
+
+.feedback__input-icon--mail {
+  background-image: url("/img/icon/mail.svg");
 }

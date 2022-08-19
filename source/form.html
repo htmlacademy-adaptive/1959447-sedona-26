@@ -92,12 +92,18 @@
               <h4 class="feedback__title">Контактная информация:</h4>
               <div class="feedback__item">
                 <label class="feedback__label">Контактный телефон*:</label>
-                <input class="feedback__input feedback__input--tel" type="tel" name="telephone number" required
+                <div class="feedback__input-wrapper">
+                  <input class="feedback__input" type="tel" name="telephone number" required
                   placeholder="Введите телефон" />
+                  <span class="feedback__input-icon feedback__input-icon--tel"></span>
+                </div>
               </div>
               <div class="feedback__item">
                 <label class="feedback__label">Электронная почта*:</label>
-                <input class="feedback__input feedback__input--mail" type="email" name="email" required placeholder="Введите e-mail" />
+                <div class="feedback__input-wrapper">
+                  <input class="feedback__input" type="email" name="email" required placeholder="Введите e-mail" />
+                  <span class="feedback__input-icon feedback__input-icon--mail"></span>
+                </div>
               </div>
             </fieldset>
 
