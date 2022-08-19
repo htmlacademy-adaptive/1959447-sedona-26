@@ -8,6 +8,14 @@
     padding-left: 156px;
     padding-right: 156px;
   }
+
+  @media (min-width: @vDesktopWidth) {
+    padding-left: 371px;
+    padding-right: 371px;
+    padding-top: 57px;
+    padding-bottom: 65px;
+    background-color: @colorWhite;
+  }
 }
 
 .hotel-offer__name {
@@ -35,6 +43,10 @@
     display: block;
     margin-bottom: 41px;
   }
+
+  @media (min-width: @vDesktopWidth) {
+    margin-bottom: 47px;
+  }
 }
 
 .hotel-offer__description-part1 {
@@ -42,4 +54,8 @@
     margin-left: 40px;
     margin-right: 40px;
   }
+}
+
+.hotel-offer__button {
+  .button;
 }

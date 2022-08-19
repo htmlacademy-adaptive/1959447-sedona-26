@@ -1,11 +1,26 @@
 .info__container {
-  background: @colorBasicBlue url("../img/back-mobile.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
+  background: @colorBasicBlue url("../img/back-mobile.jpg") no-repeat center/cover;
   padding-top: 90px;
+
+  @media (min-resolution: 2dppx) {
+    background: url("../img/back-mobile@2.jpg") no-repeat center/cover;
+  }
 
   @media (min-width: @vTabletWidth) {
     padding-top: 78px;
+    background: url("../img/back-tablet.jpg") no-repeat center/cover;
+
+    @media (min-resolution: 2dppx) {
+      background: url("../img/back-tablet@2.jpg") no-repeat center/cover;
+    }
+  }
+
+  @media (min-width: @vDesktopWidth) {
+    background: url("../img/back-desktop.jpg") no-repeat center/cover;
+
+    @media (min-resolution: 2dppx) {
+      background: url("../img/back-desktop@2.jpg") no-repeat center/cover;
+    }
   }
 }
 
@@ -20,7 +35,7 @@
   }
 
   @media (min-width: @vDesktopWidth) {
-    clip-path: polygon(0 0%, 21% 16%, 21% 0, 50% 36%, 79% 0, 79% 16%, 100% 0%, 100% 100%, 0 100%);
+    clip-path: polygon(0 0%, 21% 12%, 21% 0, 50% 29%, 79% 0, 79% 12%, 100% 0%, 100% 100%, 0 100%);
     padding-top: 114px;
   }
 }

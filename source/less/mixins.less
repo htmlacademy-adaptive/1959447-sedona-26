@@ -1,0 +1,68 @@
+.button {
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+  background-color: @colorBasicBlue;
+  padding: 16px;
+  width: 100%;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 21px;
+  line-height: 1.24;
+  color: @colorWhite;
+
+  &:hover {
+    background-color: @colorDarkBlue;
+  }
+
+  &:active {
+    background-color: @colorDarkBlue;
+    color: rgba(255, 255, 255, 0.3);
+  }
+
+  &:disabled {
+    background-color: #e5e5e5;
+  }
+}
+
+.link {
+  cursor: pointer;
+  text-decoration: none;
+}
+
+
+.fontTitle {
+  margin: 0 auto;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 1.44;
+  text-transform: uppercase;
+
+  @media (min-width: @vTabletWidth) {
+    font-size: 30px;
+    line-height: 0.87;
+  }
+}
+
+.fontDescription {
+  margin: 0 auto;
+  text-transform: uppercase;
+}
+
+.feedbackTitle {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 1.44;
+  text-transform: uppercase;
+  text-align: center;
+  margin: 0 auto;
+
+  @media (min-width: @vTabletWidth) {
+    font-size: 21px;
+    line-height: 1.24;
+  }
+
+  @media (min-width: @vDesktopWidth) {
+    line-height: 0.96;
+  }
+}

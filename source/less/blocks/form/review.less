@@ -1,4 +1,43 @@
-.review {
+.review__title {
+  .feedbackTitle;
+  margin-top: 24px;
+  margin-bottom: 22px;
+
+  @media (min-width: @vTabletWidth) {
+    position: relative;
+  }
+}
+
+.review__title::before,
+.review__title::after {
+  @media (min-width: @vTabletWidth) {
+    content: "";
+    width: 123px;
+    height: 1px;
+    background-color: @colorBorderGrey;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+
+    .feedback__group--person & {
+      display: none;
+    }
+  }
+
+  @media (min-width: @vDesktopWidth) {
+    width: 280px;
+  }
+}
+
+.review__title::before {
+  left: 0;
+}
+
+.review__title::after {
+  right: 0;
+}
+
+.review__content {
   width: 100%;
   border: none;
   background-color: #f2f2f2;
@@ -10,4 +49,26 @@
   color: rgba(0, 0, 0, 0.3);
   resize: none;
   min-height: 150px;
+  font-family: inherit;
+  display: block;
+
+  @media (min-width: @vTabletWidth) {
+    padding-top: 17px;
+    min-height: 160px;
+  }
+
+  @media (min-width: @vDesktopWidth) {
+    margin: 0 auto;
+    width: 80%;
+  }
+}
+
+.review__content:hover {
+  background-color: @colorControlGrey;
+  outline: none;
+}
+
+.review__content:active {
+  background-color: @colorWhite;
+  outline: 4px solid @colorControlGrey;
 }

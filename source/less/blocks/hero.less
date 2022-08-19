@@ -1,15 +1,32 @@
 .hero {
-  background: @colorBasicBlue url("../img/back-desktop.jpg");
+  background: @colorBasicBlue url("../img/back-mobile.jpg") no-repeat center bottom/cover;
   padding-top: 52px;
-  padding-bottom: 62px;
-  background-repeat: no-repeat;
-  background-size: cover;
+  padding-bottom: 65px;
   clip-path: polygon(0 0, 100% 0, 100% 85%, 50% 100%, 0 85%, 0 0);
 
+  @media (min-resolution: 2dppx) {
+    background: url("../img/back-mobile@2.jpg") no-repeat center bottom/cover;
+  }
+
   @media (min-width: @vTabletWidth) {
-    clip-path: polygon(0 0, 100% 0, 100% 84%, 96% 85%, 96% 77%, 50% 96%, 4% 77%, 4% 84%, 0 84%);
+    clip-path: polygon(0 0, 100% 0, 100% 84%, 96% 85%, 96% 77%, 50% 95%, 4% 77%, 4% 84%, 0 84%);
     padding-top: 93px;
     padding-bottom: 130px;
+    background: url("../img/back-tablet.jpg") no-repeat center bottom 14px/cover;
+
+    @media (min-resolution: 2dppx) {
+      background: url("../img/back-tablet@2.jpg") no-repeat center bottom 14px/cover;
+    }
+  }
+
+  @media (min-width: @vDesktopWidth) {
+    padding-top: 100px;
+    clip-path: polygon(0 0, 100% 0, 100% 79%, 79% 87%, 79% 79%, 50% 97%, 21% 79%, 21% 87%, 0 78%);
+    background: url("../img/back-desktop.jpg") no-repeat center bottom 8px/cover;
+
+    @media (min-resolution: 2dppx) {
+      background: url("../img/back-desktop@2.jpg") no-repeat center bottom 8px/cover;
+    }
   }
 }
 

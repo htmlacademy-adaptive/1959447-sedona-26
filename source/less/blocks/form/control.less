@@ -1,11 +1,33 @@
 .control {
+  list-style: none;
   display: flex;
+  flex-direction: column;
   flex-wrap: wrap;
+  margin: 0 auto;
+  padding: 0;
+
+  @media (min-width: @vTabletWidth) {
+    flex-direction: row;
+    padding-left: 35px;
+    padding-right: 20px;
+    row-gap: 17px;
+  }
+
+  @media (min-width: @vDesktopWidth) {
+    padding-top: 20px;
+    justify-content: space-between;
+    row-gap: 0;
+    padding-left: 52px;
+    padding-right: 25px;
+  }
 }
 
 .control__item {
+  margin-bottom: 16px;
+
   @media (min-width: @vTabletWidth) {
     width: 50%;
+    margin-bottom: 0;
   }
 
   @media (min-width: @vDesktopWidth) {
@@ -18,4 +40,49 @@
   font-weight: 700;
   font-size: 18px;
   line-height: 1.44;
+  display: flex;
+  align-items: center;
+}
+
+.control__label:hover .control__checkbox {
+  background-color: @colorControlGrey;
+}
+
+.control__label:active .control__checkbox {
+  background-color: @colorActiveGrey;
+}
+
+.control__label:active .control__checkbox::before {
+  opacity: 0.3;
+}
+
+.control__label:focus-within .control__checkbox {
+  background-color: @colorControlGrey;
+}
+
+.control__button {
+  width: 46px;
+  height: 46px;
+  background-color: @colorSpecialGrey;
+  margin-right: 16px;
+  position: relative;
+  border-radius: 50%;
+  display: flex;
+}
+
+.control__button::before {
+  content: "";
+  width: 16px;
+  height: 16px;
+  background-color: @colorBlackDark;
+  position: absolute;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: none;
+}
+
+.control__input:checked + .control__button::before {
+  display: block;
 }

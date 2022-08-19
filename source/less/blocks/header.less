@@ -1,44 +1,51 @@
 .header {
   position: relative;
   background-color: @colorWhite;
+  min-height: 56px;
 
   &--inner {
     z-index: 1;
-
-    @media (min-width: @vTabletWidth) {
-      padding-left: 28px;
-      padding-right: 28px;
-    }
   }
 }
 
 .header--opened .header__dropdown {
   display: block;
-  // todo временно, удалить при реализации открывания меню
-  grid-column: 1/-1;
 }
 
 
 .header__wrapper {
   text-align: right;
+  padding-top: 14px;
+  padding-bottom: 17px;
+  position: relative;
 
   @media (min-width: @vTabletWidth) {
     display: flex;
+    padding-top: 9px;
+    padding-left: 3px;
+  }
+
+  @media (min-width: @vDesktopWidth) {
+    padding-top: 0;
+    padding-left: 0;
   }
 }
 
 .header__dropdown {
   display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
 
   @media (min-width: @vTabletWidth) {
     display: block;
-    padding-top: 10px;
-    padding-bottom: 16px;
     width: 100%;
+    position: relative;
   }
 
   @media (min-width: @vDesktopWidth) {
-    padding-top: 7px;
+    padding-top: 9px;
   }
 }
 
@@ -46,38 +53,5 @@
   position: absolute;
   left: 50%;
   transform: translate(-50%);
-}
-
-.header__toggle {
-  margin-top: 17px;
-  margin-bottom: 17px;
-  cursor: pointer;
-  margin-right: 20px;
-  position: relative;
-  width: 23px;
-  height: 23px;
-  background-color: inherit;
-  border: none;
-
-  &--opened {
-    position: absolute;
-    top: 0;
-    right: 20px;
-  }
-
-  @media (min-width: @vTabletWidth) {
-    display: none;
-  }
-}
-
-.header__toggle--closed::before {
-  content: "";
-  width: 23px;
-  height: 4px;
-  position: absolute;
-  display: block;
   top: 0;
-  left: 0;
-  background-color: @colorBasicBlue;
-  box-shadow: 0 9px 0 0 @colorBasicBlue, 0 18px 0 0 @colorBasicBlue;
 }
