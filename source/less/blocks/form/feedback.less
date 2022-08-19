@@ -39,16 +39,6 @@
       width: 50%;
       align-self: flex-start;
     }
-
-    &:first-child {
-      padding-right: 43px;
-      border-right: 2px solid @colorSpecialGrey;
-      position: relative;
-    }
-
-    &:last-of-type {
-      padding-top: 42px;
-    }
   }
 
   @media (min-width: @vDesktopWidth) {
@@ -59,10 +49,22 @@
       padding-top: 0;
       padding-bottom: 0;
     }
+  }
+}
 
-    &:last-of-type {
-      padding-top: 71px;
-    }
+.feedback__group:last-of-type {
+  padding-top: 42px;
+
+  @media (min-width: @vDesktopWidth) {
+    padding-top: 71px;
+  }
+}
+
+.feedback__group:first-child {
+  @media (min-width: @vTabletWidth) {
+    padding-right: 43px;
+    border-right: 2px solid @colorSpecialGrey;
+    position: relative;
   }
 }
 

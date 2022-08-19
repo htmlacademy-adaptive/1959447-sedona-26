@@ -2,28 +2,30 @@
   position: relative;
   padding-top: 24px;
 
-  &:last-child {
-    padding-bottom: 24px;
-  }
-
   @media (min-width: @vTabletWidth) {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     background-color: @colorSpecialGrey;
     padding-top: 0;
-
-    &:nth-child(odd):not(:first-child) {
-      background-color: @colorBackgroundGrey;
-    }
-
-    &:last-child {
-      padding-bottom: 0;
-    }
   }
 
   @media (min-width: @vDesktopWidth) {
     position: relative;
+  }
+}
+
+.card:last-child {
+  padding-bottom: 24px;
+
+  @media (min-width: @vTabletWidth) {
+    padding-bottom: 0;
+  }
+}
+
+.card:nth-child(odd):not(:first-child) {
+  @media (min-width: @vTabletWidth) {
+    background-color: @colorBackgroundGrey;
   }
 }
 
@@ -142,10 +144,6 @@
   display: flex;
   margin-bottom: 25px;
 
-  .card:last-child & {
-    margin-bottom: 2px;
-  }
-
   @media (min-width: @vTabletWidth) {
     margin-left: auto;
     margin-right: 20px;
@@ -155,6 +153,10 @@
   @media (min-width: @vDesktopWidth) {
     color: @colorWhite;
   }
+}
+
+.card:last-child .card__like {
+  margin-bottom: 2px;
 }
 
 .card__like-count {

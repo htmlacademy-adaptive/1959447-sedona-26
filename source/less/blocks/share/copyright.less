@@ -1,9 +1,3 @@
-.copyright {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 .copyright__text {
   margin: 0;
   text-transform: uppercase;
@@ -11,5 +5,21 @@
 
   @media (min-width: @vTabletWidth) {
     margin-right: 12px;
+  }
+}
+
+.copyright__link {
+  .link;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: @colorBlackDark;
+
+  &:hover {
+    color: @colorBasicBlue;
+  }
+
+  &:active {
+    color: @colorActiveGrey;
   }
 }

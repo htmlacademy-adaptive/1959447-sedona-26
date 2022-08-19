@@ -1,8 +1,9 @@
 .video {
-  padding-top: 15px;
+  padding-top: 17px;
   text-align: center;
   padding-left: 20px;
   padding-right: 20px;
+  padding-bottom: 5px;
 
   @media (min-width: @vTabletWidth) {
     padding: 60px 60px 40px;
@@ -14,34 +15,6 @@
     padding-right: 200px;
     padding-top: 62px;
   }
-}
-
-.video__content {
-  display: block;
-
-  @media (min-width: @vTabletWidth) {
-    width: 648px;
-    height: 500px;
-  }
-
-  @media (min-width: @vDesktopWidth) {
-    width: 800px;
-    height: 500px;
-  }
-}
-
-.video__content[poster] {
-  @media (min-width: @vTabletWidth) {
-    width: 648px;
-    height: 500px;
-  }
-}
-
-
-@media (min-width: @vTabletWidth) {
-  margin-bottom: 90px;
-  margin-left: 100px;
-  margin-right: 100px;
 }
 
 .video__title {
@@ -56,12 +29,77 @@
 .video__description {
   .fontDescription;
   max-width: 85%;
-  margin-bottom: 44px;
+  margin-bottom: 37px;
 
   @media (min-width: @vTabletWidth) {
     width: auto;
     margin-left: 100px;
     margin-right: 100px;
     margin-bottom: 89px;
+  }
+}
+
+.video__wrapper {
+  position: relative;
+  min-height: 177px;
+
+  @media (min-width: @vTabletWidth) {
+    min-height: 500px;
+  }
+
+  @media (min-width: @vDesktopWidth) {
+    min-height: 685px;
+  }
+}
+
+.video__button {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.video__button::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 53%;
+  transform: translate(-50%, -50%);
+  width: 0;
+  height: 0;
+  border-top: 27px solid transparent;
+  border-left: 50px solid @colorWhite;
+  border-bottom: 27px solid transparent;
+  opacity: 0.7;
+
+  @media (min-width: @vTabletWidth) {
+    left: 50%;
+  }
+}
+
+.video__poster--wrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.video__poster {
+  display: block;
+  object-fit: cover;
+
+  @media (min-width: @vTabletWidth) {
+    width: 648px;
+    height: auto;
+  }
+
+  @media (min-width: @vDesktopWidth) {
+    width: 800px;
+    height: 685px;
   }
 }
