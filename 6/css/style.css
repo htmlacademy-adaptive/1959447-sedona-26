@@ -389,6 +389,15 @@ body {
   background-color: #81b3d2;
   align-items: center;
 }
+.social__link:hover {
+  background-color: #669ec0;
+}
+.social__link:active {
+  background-color: #5496BD;
+}
+.social__link:active .social__link-svg {
+  opacity: 0.3;
+}
 .social__item {
   margin-right: 3px;
   margin-left: 3px;
@@ -404,6 +413,7 @@ body {
 .social__link-svg {
   width: 24px;
   height: 24px;
+  fill: #ffffff;
 }
 .copyright__text {
   margin: 0;
@@ -970,6 +980,7 @@ body {
   display: block;
   border: none;
   width: 100%;
+  height: 320px;
 }
 @media (min-width: 768px) {
   .address__map {
@@ -1790,7 +1801,7 @@ body {
   background-color: #e5e5e5;
 }
 .control__button {
-  width: 46px;
+  flex: 0 0 46px;
   height: 46px;
   background-color: #f2f2f2;
   margin-right: 16px;
@@ -1855,7 +1866,7 @@ body {
   align-items: center;
 }
 .checkbox__button {
-  width: 46px;
+  flex: 0 0 46px;
   height: 46px;
   background-color: #f2f2f2;
   margin-right: 16px;
