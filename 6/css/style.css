@@ -1049,7 +1049,6 @@ body {
   background-color: #e5e5e5;
 }
 .address {
-  background-image: url("./img/map-backgrond.jpg");
   background-size: contain;
   background-repeat: no-repeat;
   height: auto;
@@ -1760,6 +1759,9 @@ body {
 .feedback__item--pixelPerfect {
   margin-bottom: 12px;
 }
+.feedback__input[type="email"] {
+  padding-right: 80px;
+}
 .feedback__input-wrapper {
   display: flex;
   position: relative;
@@ -1814,10 +1816,10 @@ body {
   background-position: center;
 }
 .feedback__input-icon--tel {
-  background-image: url("/img/icon/phone.svg");
+  background-image: url("../img/icon/phone.svg");
 }
 .feedback__input-icon--mail {
-  background-image: url("/img/icon/mail.svg");
+  background-image: url("../img/icon/mail.svg");
 }
 .control {
   list-style: none;
@@ -2153,5 +2155,9 @@ body {
     fill: #ffffff;
     opacity: 1;
   }
+}
+.button-love--like .button-love__icon {
+  fill: #ff0000;
+  opacity: 1;
 }
 /*# sourceMappingURL=style.css.map */
