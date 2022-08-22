@@ -1,0 +1,18 @@
+.button-love {
+  border: none;
+  background-color: inherit;
+}
+
+.button-love__icon {
+  opacity: 0.3;
+
+  @media (min-width: @vDesktopWidth) {
+    fill: @colorWhite;
+    opacity: 1;
+  }
+}
+
+.button-love--like .button-love__icon {
+  fill: #ff0000;
+  opacity: 1;
+}

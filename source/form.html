@@ -92,12 +92,18 @@
               <h4 class="feedback__title">Контактная информация:</h4>
               <div class="feedback__item">
                 <label class="feedback__label">Контактный телефон*:</label>
-                <input class="feedback__input feedback__input--tel" type="tel" name="telephone number" required
-                  placeholder="Введите телефон" />
+                <div class="feedback__input-wrapper">
+                  <input class="feedback__input" type="tel" name="telephone number" required
+                  placeholder="Введите телефон" maxlength="15" />
+                  <span class="feedback__input-icon feedback__input-icon--tel"></span>
+                </div>
               </div>
               <div class="feedback__item">
                 <label class="feedback__label">Электронная почта*:</label>
-                <input class="feedback__input feedback__input--mail" type="email" name="email" required placeholder="Введите e-mail" />
+                <div class="feedback__input-wrapper">
+                  <input class="feedback__input" type="email" name="email" required placeholder="Введите e-mail" />
+                  <span class="feedback__input-icon feedback__input-icon--mail"></span>
+                </div>
               </div>
             </fieldset>
 
@@ -192,8 +198,8 @@
         <ul class="footer__list social">
           <li class="social__item">
             <a class="social__link social__link--vk" href="https://vk.com/htmlacademy" title="Наш Вконтакте">
-              <svg class="social__link-svg" width="22" height="12" viewBox="0 0 22 12">
-                <use xlink:href="#icon-vk"></use>
+              <svg class="social__link-svg" width="24" height="14" viewBox="0 0 24 14">
+                <use xlink:href="img/sprite.svg#icon-vk"></use>
               </svg>
               <span class="visually-hidden">Vk</span>
             </a>
@@ -202,7 +208,7 @@
           <li class="social__item">
             <a class="social__link social__link--tm" href="tg://resolve?domain=htmlacademy" title="Наш Телеграм">
               <svg class="social__link-svg" width="22" height="20" viewBox="0 0 22 20">
-                <use xlink:href="#icon-tm"></use>
+                <use xlink:href="img/sprite.svg#icon-tm"></use>
               </svg>
               <span class="visually-hidden">Telegram</span></a>
           </li>
@@ -211,11 +217,12 @@
             <a class="social__link social__link--youtube" href="https://www.youtube.com/user/htmlacademyru"
               title="Наш канал на YouTube">
               <svg class="social__link-svg" width="22" height="16" viewBox="0 0 22 16">
-                <use xlink:href="#icon-youtube"></use>
+                <use xlink:href="img/sprite.svg#icon-youtube"></use>
               </svg>
               <span class="visually-hidden">Youtube</span></a>
           </li>
         </ul>
+
         <div class="footer__copyright copyright">
           <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive"><span class="visually-hidden">HTML
               Academy</span>

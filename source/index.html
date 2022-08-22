@@ -5,16 +5,18 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="stylesheet" href="css/style.css" />
-  <link rel="icon" href="img/favicon/32.png"> <!-- 32×32 -->
-  <link rel="icon" href="img/favicon/152.svg" type="image/svg+xml">
-  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="img/favicon/32.png" />
+  <!-- 32×32 -->
+  <link rel="icon" href="img/favicon/152.svg" type="image/svg+xml" />
+  <link rel="manifest" href="manifest.webmanifest" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.8.0/dist/leaflet.css"
+    integrity="sha512-hoalWLoI8r4UszCkZ5kL8vayOGVae1oxXe/2A4AO6J9+580uKHDO3JdHb7NzwwzK5xr/Fs0W40kiNHxM9vyTtQ=="
+    crossorigin="" />
   <title>HTML Academy: Седона</title>
 </head>
 
 <body class="page__body">
-
   <div class="page__wrapper">
-
     <header class="header">
       <div class="header__wrapper">
         <div class="header__logo">
@@ -23,7 +25,7 @@
           </a>
         </div>
 
-        <input id="toggle" class="toggle visually-hidden" type="checkbox">
+        <input id="toggle" class="toggle visually-hidden" type="checkbox" />
         <label for="toggle" class="header__toggle hamburger">
           <span class="hamburger__line hamburger__line--top"></span>
           <span class="hamburger__line hamburger__line--meat"></span>
@@ -84,18 +86,29 @@
             <li class="advantages__item advantages__item--color">
               <div class="advantages__item-wrapper">
                 <div class="advantages__item-text">
-                  <h3 class="advantages__name">
-                    Настоящий городок
-                  </h3>
+                  <h3 class="advantages__name">Настоящий городок</h3>
                   <p class="advantages__order">&mdash; №1 &mdash;</p>
                   <p class="advantages__description advantages__description--color">
-                    Седона не&nbsp;аттракцион для туристов, там течет своя жизнь
+                    Седона не&nbsp;аттракцион для туристов, там течет своя
+                    жизнь
                   </p>
                 </div>
                 <div class="image-wrapper">
                   <picture>
-                    <source media="(min-width: 1280px)" srcset="img/sedona-desktop.jpg 1x, img/sedona-desktop@2.jpg 2x">
-                    <source media="(min-width: 768px)" srcset="img/sedona-tablet.jpg 1x, img/sedona-tablet@2.jpg 2x">
+                    <source type="image/webp" media="(min-width: 1280px)"
+                      srcset="img/sedona-desktop.webp 1x, img/sedona-desktop@2.webp 2x" />
+                    <source type="image/webp" media="(min-width: 768px)"
+                      srcset="img/sedona-tablet.webp 1x, img/sedona-tablet@2.webp 2x" />
+                    <source type="image/webp" srcset="img/sedona-mobile.webp 1x, img/sedona-mobile@2.webp 2x">
+
+                    <source media="(min-width: 1280px)" srcset="
+                          img/sedona-desktop.jpg   1x,
+                          img/sedona-desktop@2.jpg 2x
+                        " />
+                    <source media="(min-width: 768px)" srcset="
+                          img/sedona-tablet.jpg   1x,
+                          img/sedona-tablet@2.jpg 2x
+                        " />
                     <img class="advantages__image" src="img/sedona-mobile.jpg" srcset="img/sedona-mobile@2.jpg 2x"
                       width="320" height="260" alt="Город Седона." />
                   </picture>
@@ -103,13 +116,12 @@
               </div>
               <ul class="advantages__secondary features">
                 <li class="features__item">
-                  <svg class="features__icon" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M15.402 33.22h8.353V21.06h-8.353v12.16Zm6.839-1.476h-5.325v-9.207h5.273v9.207h.052Z" />
-                    <path
-                      d="M37.904 20.043 39 18.975l-5.169-5.036V.203h-7.205v6.715L19.474 0 0 19.026l1.096 1.068 4.073-3.968v19.23H3.133v1.474h33.361v-1.475h-2.663v-19.28l4.073 3.968ZM28.14 1.73h4.124v10.733L28.14 8.445V1.73Zm4.176 33.574H6.735V14.6L19.474 2.137 32.265 14.6v20.704h.052Z" />
-                    <path
-                      d="M15.558 13.837c0 2.187 1.828 3.968 4.02 3.968 2.245 0 4.073-1.78 4.073-3.968 0-2.188-1.828-3.917-4.073-3.917s-4.02 1.73-4.02 3.917Zm4.02-2.544c1.41 0 2.61 1.12 2.61 2.544 0 1.373-1.148 2.543-2.61 2.543-1.41 0-2.61-1.119-2.61-2.543 0-1.374 1.2-2.544 2.61-2.544Zm-9.188 9.768H8.822v1.984h1.566v-1.984Zm3.08 0h-1.566v1.984h1.566v-1.984Zm-3.08 3.052H8.822v1.984h1.566v-1.984Zm3.08 0h-1.566v1.984h1.566v-1.984Zm13.574-3.052h-1.566v1.984h1.566v-1.984Zm3.133 0H28.61v1.984h1.566v-1.984Zm-3.133 3.052h-1.566v1.984h1.566v-1.984Zm3.133 0H28.61v1.984h1.566v-1.984Z" />
+                  <img>
+                  <svg class="features__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                      d="M75.9 43.18 78 41.1l-9.94-9.84V4.4H54.2v13.12L40.45 4 3 41.2l2.1 2.08 7.84-7.76v37.6H9.02V76h64.16v-2.88h-5.12v-37.7l7.83 7.76ZM57.11 7.38h7.93v20.98l-7.93-7.85V7.38Zm7.93 65.64h-49.1V32.54l24.5-24.36 24.6 24.36v40.48Zm-31.93-4.48h16.06V44.77H33.12v23.77Zm13.05-2.88H36.03v-18h10.14v18ZM40.85 39.3a7.78 7.78 0 0 1-7.73-7.75 7.63 7.63 0 0 1 7.73-7.66 7.72 7.72 0 0 1 7.83 7.66 7.8 7.8 0 0 1-7.83 7.75Zm5.02-7.75a5.01 5.01 0 0 0-10.04 0 5.01 5.01 0 0 0 10.04 0ZM23.08 44.77h-3.01v3.88h3.01v-3.88Zm3.01 0h3.01v3.88h-3v-3.88Zm-3.01 5.97h-3.01v3.88h3.01v-3.88Zm3.01 0h3.01v3.88h-3v-3.88Zm29.12-5.97H52.2v3.88h3v-3.88Zm3.01 0h3.01v3.88h-3v-3.88Zm-3.01 5.97H52.2v3.88h3v-3.88Zm3.01 0h3.01v3.88h-3v-3.88Z" />
                   </svg>
+
                   <div class="features__wrapper">
                     <p class="features__name">Жилье</p>
                     <p class="features__description">
@@ -118,11 +130,9 @@
                   </div>
                 </li>
                 <li class="features__item">
-                  <svg class="features__icon" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
-                    <path
-                      d="M37.743 23.3H2.257C.997 23.3 0 24.314 0 25.478v1.773c0 1.165.997 2.128 2.257 2.128h.525v.506c0 2.786 2.362 5.015 5.197 5.015h24.042c2.887 0 5.197-2.28 5.197-5.015v-.506h.525c1.207 0 2.257-.963 2.257-2.178v-1.773c0-1.114-.997-2.128-2.257-2.128Zm-2.047 6.585c0 1.925-1.628 3.495-3.622 3.495H7.927c-1.995 0-3.623-1.57-3.623-3.495v-.506h31.392v.506Zm2.73-2.684c0 .354-.316.658-.683.658H2.257c-.367 0-.682-.304-.682-.658v-1.773c0-.304.315-.608.682-.608h35.538c.368 0 .683.304.683.659V27.2h-.053ZM8.504 19.197l2.835 2.026 2.887-2.026 2.887 2.026L20 19.197l2.835 2.026 2.887-2.026 2.887 2.026 2.887-2.026 2.887 2.026 3.307-2.38-.892-1.216-2.415 1.672-2.887-2.026-2.887 2.026-2.887-2.026-2.887 2.026L20 17.273l-2.887 2.026-2.887-2.026-2.887 2.026-2.835-2.026-2.887 2.026-2.415-1.672-.945 1.216 3.36 2.38 2.887-2.026Zm28.714-3.444c0-.304.052-1.317 0-1.52C36.85 6.332 29.29 0 20 0S3.097 6.332 2.73 14.233v1.52h34.488ZM20 1.52c8.399 0 15.328 5.673 15.643 12.713H4.304C4.672 7.193 11.601 1.52 20 1.52Z" />
-                    <path
-                      d="M20 8.611c.58 0 1.05-.453 1.05-1.013 0-.56-.47-1.013-1.05-1.013-.58 0-1.05.454-1.05 1.013 0 .56.47 1.013 1.05 1.013Zm-4.2-2.482c.58 0 1.05-.454 1.05-1.013 0-.56-.47-1.013-1.05-1.013-.58 0-1.05.453-1.05 1.013 0 .56.47 1.013 1.05 1.013Zm8.4 0c.58 0 1.05-.454 1.05-1.013 0-.56-.47-1.013-1.05-1.013-.58 0-1.05.453-1.05 1.013 0 .56.47 1.013 1.05 1.013Z" />
+                  <svg class="features__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                      d="M72.53 36.37c.02-.82.06-1.94-.02-2.23C71.81 18.52 57.45 6 39.8 6S7.69 18.52 6.99 34.14v3H72.5l.02-.77ZM39.8 9c15.96 0 29.12 11.22 29.72 25.14H9.98C10.68 20.22 23.84 9 39.8 9ZM23.24 48.86l-5.38-4-5.49 4L6 44.16l1.8-2.4 4.58 3.3 5.49-4 5.38 4 5.49-4 5.49 4 5.48-4 5.39 4 5.48-4 5.49 4 5.48-4 5.49 4 4.59-3.3 1.7 2.4-6.3 4.7-5.48-4-5.48 4-5.49-4-5.48 4-5.39-4-5.48 4-5.49-4-5.49 4ZM6.3 52.06h67.4c2.4 0 4.29 2.01 4.29 4.21v3.5c0 2.41-2 4.31-4.29 4.31h-1v1A9.91 9.91 0 0 1 62.83 75H17.16a9.92 9.92 0 0 1-9.87-9.91v-1h-1c-2.4 0-4.29-1.9-4.29-4.21v-3.5c0-2.31 1.9-4.31 4.29-4.31ZM62.94 72a6.9 6.9 0 0 0 6.88-6.91v-1H10.18v1a6.9 6.9 0 0 0 6.88 6.9h45.88Zm10.77-10.92c.7 0 1.3-.6 1.3-1.3h.1v-3.4c0-.7-.6-1.3-1.3-1.3H6.3c-.7 0-1.3.6-1.3 1.2v3.5c0 .7.6 1.3 1.3 1.3h67.4ZM41.9 21.62a2 2 0 1 1-4 .01 2 2 0 0 1 4 0Zm-9.98-3a2 2 0 1 0 0-4 2 2 0 0 0 0 4Zm17.95-2a2 2 0 1 1-4 0 2 2 0 0 1 4 0Z" />
                   </svg>
                   <div class="features__wrapper">
                     <p class="features__name">Еда</p>
@@ -133,9 +143,9 @@
                   </div>
                 </li>
                 <li class="features__item">
-                  <svg class="features__icon" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+                  <svg class="features__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80">
                     <path
-                      d="M30.578 11.206H18.184c6.908-3.444 7.467-5.622 7.213-6.838-.559-1.975-2.845-3.495-4.978-2.685-2.794 1.064-3.556 5.218-4.317 8.206-.966-3.04-1.88-6.889-4.064-8.864-.61-.557-1.524-1.114-2.895-1.013-2.032.203-4.927 2.684-3.708 5.47 1.117 2.685 4.825 4.407 7.314 5.775H1.422C.61 11.257 0 11.915 0 12.675v5.672c0 .811.66 1.419 1.422 1.419h.153V38h28.952V19.766h.05c.813 0 1.423-.659 1.423-1.418v-5.673c0-.81-.66-1.47-1.422-1.47ZM21.232 2.95c1.066-.152 2.489.658 2.641 1.62.203 1.368-1.676 2.634-2.54 3.192-1.27.86-2.489 1.316-3.657 2.026.407-1.874 1.27-6.534 3.556-6.838ZM9.752 7.914c-1.117-.76-3.25-2.23-3.2-3.9.051-1.824 2.896-3.293 4.42-1.925 1.93 1.671 2.844 5.571 3.555 8.306-1.625-.81-3.15-1.418-4.775-2.481ZM12.75 36.48H3.048V19.765h9.701V36.48Zm0-18.235H1.524v-5.52h11.225v5.52Zm5.08 18.235h-3.607V12.724h3.607V36.48Zm11.174 0h-9.65V19.765h9.701V36.48h-.05Zm1.473-18.235H19.352v-5.52h11.124v5.52Z" />
+                      d="M69.2 25.12H44.8c13.6-6.8 14.7-11.1 14.2-13.5-1.1-3.9-5.6-6.9-9.8-5.3-5.5 2.1-7 10.3-8.5 16.2-1.9-6-3.7-13.6-8-17.5-1.2-1.1-3-2.2-5.7-2-4 .4-9.7 5.3-7.3 10.8 2.2 5.3 9.5 8.7 14.4 11.4H11.8a2.8 2.8 0 0 0-2.8 2.8v11.2c0 1.6 1.3 2.8 2.8 2.8h.3V78h57V42.01h.1c1.6 0 2.8-1.3 2.8-2.8v-11.2c0-1.6-1.3-2.9-2.8-2.9ZM50.8 8.82c2.1-.3 4.9 1.3 5.2 3.2.4 2.7-3.3 5.2-5 6.3-2.5 1.7-4.9 2.6-7.2 4 .8-3.7 2.5-12.9 7-13.5Zm-22.6 9.8c-2.2-1.5-6.4-4.4-6.3-7.7.1-3.6 5.7-6.5 8.7-3.8 3.8 3.3 5.6 11 7 16.4-3.2-1.6-6.2-2.8-9.4-4.9ZM34.1 75H15V42.01h19.1v33Zm0-35.99H12v-10.9h22.1v10.9Zm10 36H37V28.1h7.1V75Zm22 0h-19V42h19.1v33h-.1ZM69 39H47.1V28.1H69V39Z" />
                   </svg>
                   <div class="features__wrapper">
                     <p class="features__name">Сувениры</p>
@@ -149,19 +159,23 @@
             <li class="advantages__item advantages__item--color">
               <div class="advantages__item-wrapper">
                 <div class="advantages__item-text">
-                  <h3 class="advantages__name">
-                    Там есть мост дьявола
-                  </h3>
+                  <h3 class="advantages__name">Там есть <span class="advantages__name--wrap">мост дьявола</span></h3>
                   <p class="advantages__order">&mdash; №2 &mdash;</p>
                   <p class="advantages__description advantages__description--color">
-                    Да, по&nbsp;нему можно пройти! Если вы&nbsp;осмелитесь,
+                    Да, по&nbsp;нему можно пройти! Если вы осмелитесь,
                     конечно
                   </p>
                 </div>
                 <div class="image-wrapper image-wrapper--order">
                   <picture>
-                    <source media="(min-width: 1280px)" srcset="img/bridge-desktop.jpg 1x, img/bridge-desktop@2.jpg 2x">
-                    <source media="(min-width: 768px)" srcset="img/bridge-tablet.jpg 1x, img/bridge-tablet@2.jpg 2x">
+                    <source media="(min-width: 1280px)" srcset="
+                          img/bridge-desktop.jpg   1x,
+                          img/bridge-desktop@2.jpg 2x
+                        " />
+                    <source media="(min-width: 768px)" srcset="
+                          img/bridge-tablet.jpg   1x,
+                          img/bridge-tablet@2.jpg 2x
+                        " />
                     <img class="advantages__image" src="img/bridge-mobile.jpg" srcset="img/bridge-mobile@2.jpg 2x"
                       width="320" height="260" alt="Мост дьявола." />
                   </picture>
@@ -180,7 +194,7 @@
               <h3 class="advantages__name">Красивая дорога</h3>
               <p class="advantages__order">&mdash; №4 &mdash;</p>
               <p class="advantages__description">
-                Ехать в&nbsp;Седону из&nbsp;Лас-Вегаса совсем не&nbsp;скучно!
+                Ехать в&nbsp;Седону из Лас-Вегаса совсем не&nbsp;скучно!
               </p>
             </li>
             <li class="advantages__item">
@@ -198,7 +212,8 @@
         <div class="hotel-offer__container">
           <h2 class="visually-hidden">Поиск отелей в городе Седона.</h2>
           <p class="hotel-offer__name">Заинтересовались?</p>
-          <p class="hotel-offer__description"> <span class="hotel-offer__description-part1">
+          <p class="hotel-offer__description">
+            <span class="hotel-offer__description-part1">
               Укажите предполагаемые даты поездки,
             </span>
             и&nbsp;мы&nbsp;покажем вам лучшие предложения
@@ -210,9 +225,7 @@
 
       <section class="address">
         <h2 class="visually-hidden">Местонахождение города.</h2>
-        <iframe class="address__map"
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d105362.64752541122!2d-111.53196366049582!3d34.38653149740771!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x872c3f389d52d459%3A0xf087eff6c38a4f49!2sPine%2C%20AZ%2085544%2C%20USA!5e0!3m2!1sen!2str!4v1659470003221!5m2!1sen!2str"
-          width="320" height="350"></iframe>
+        <div id="map" class="address__map"></div>
       </section>
     </main>
 
@@ -225,8 +238,8 @@
         <ul class="footer__list social">
           <li class="social__item">
             <a class="social__link social__link--vk" href="https://vk.com/htmlacademy" title="Наш Вконтакте">
-              <svg class="social__link-svg" width="22" height="12" viewBox="0 0 22 12">
-                <use xlink:href="#icon-vk"></use>
+              <svg class="social__link-svg" width="24" height="14" viewBox="0 0 24 14">
+                <use xlink:href="img/sprite.svg#icon-vk"></use>
               </svg>
               <span class="visually-hidden">Vk</span>
             </a>
@@ -235,7 +248,7 @@
           <li class="social__item">
             <a class="social__link social__link--tm" href="tg://resolve?domain=htmlacademy" title="Наш Телеграм">
               <svg class="social__link-svg" width="22" height="20" viewBox="0 0 22 20">
-                <use xlink:href="#icon-tm"></use>
+                <use xlink:href="img/sprite.svg#icon-tm"></use>
               </svg>
               <span class="visually-hidden">Telegram</span></a>
           </li>
@@ -244,14 +257,15 @@
             <a class="social__link social__link--youtube" href="https://www.youtube.com/user/htmlacademyru"
               title="Наш канал на YouTube">
               <svg class="social__link-svg" width="22" height="16" viewBox="0 0 22 16">
-                <use xlink:href="#icon-youtube"></use>
+                <use xlink:href="img/sprite.svg#icon-youtube"></use>
               </svg>
               <span class="visually-hidden">Youtube</span></a>
           </li>
         </ul>
+
         <div class="footer__copyright copyright">
-          <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive"><span class="visually-hidden">HTML
-              Academy</span>
+          <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive"
+            aria-label="Сайт HTML Academy"><span class="visually-hidden">HTML Academy</span>
             <p class="copyright__text">Разработано</p>
             <svg class="copyright__logo" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 27 35"
               width="27" height="33">
@@ -264,8 +278,11 @@
     </footer>
   </div>
 
-  <script src="js/main.js" type="module"> </script>
-
+  <script src="https://unpkg.com/leaflet@1.8.0/dist/leaflet.js"
+    integrity="sha512-BB3hKbKWOc9Ez/TAwyWxNXeoV9c1v6FIeYiBieIWkpLjauysF18NzgR1MBNBXf8/KABdlkX68nAhlwcDFLGPCQ=="
+    crossorigin=""></script>
+    <script src="js/map.js"></script>
+  <script src="js/main.js"></script>
 </body>
 
 </html>
