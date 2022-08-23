@@ -8,25 +8,29 @@
 
   @media (min-width: @vTabletWidth) {
     flex-direction: row;
-    padding-left: 40px;
-    padding-right: 40px;
+    padding-left: 83px;
+    padding-right: 50px;
     justify-content: center;
   }
 
   @media (min-width: @vDesktopWidth) {
-    justify-content: space-between;
+    justify-content: flex-start;
+    padding-left: 44px;
+    column-gap: 64px;
   }
 }
 
 .checkbox__item {
-  margin-bottom: 16px;
+  margin-bottom: 11px;
 
   @media (min-width: @vTabletWidth) {
     flex: 0 0 50%;
+    margin-bottom: 17px;
   }
 
   @media (min-width: @vDesktopWidth) {
-    flex: 0 0 25%;
+    flex: auto;
+    flex-shrink: 0;
   }
 }
 
