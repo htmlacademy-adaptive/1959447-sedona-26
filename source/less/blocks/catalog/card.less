@@ -111,7 +111,7 @@
   text-transform: uppercase;
   font-size: 14px;
   line-height: 1.5;
-  margin-top: 15px;
+  margin-top: 16px;
 
   @media (min-width: @vTabletWidth) {
     margin-left: 20px;
@@ -126,7 +126,7 @@
 .card__author {
   margin: 0;
   text-align: left;
-  margin-bottom: 18px;
+  margin-bottom: 13px;
 
   @media (min-width: @vTabletWidth) {
     grid-column: 1/2;
@@ -143,7 +143,7 @@
 .card__like {
   display: flex;
   margin-bottom: 25px;
-  align-items: center;
+  align-items: flex-end;
 
   @media (min-width: @vTabletWidth) {
     margin-left: auto;
@@ -153,6 +153,7 @@
 
   @media (min-width: @vDesktopWidth) {
     color: @colorWhite;
+    margin-right: 0;
   }
 }
 
@@ -164,4 +165,8 @@
   margin: 0;
   margin-left: 14px;
   font-weight: 700;
+
+  @media (min-width: @vDesktopWidth) {
+    margin-left: 10px;
+  }
 }

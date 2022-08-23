@@ -1,3 +1,9 @@
+.copyright {
+  @media (min-width: @vTabletWidth) {
+    max-width: 200px;
+  }
+}
+
 .copyright__text {
   margin: 0;
   text-transform: uppercase;
@@ -22,4 +28,8 @@
   &:active {
     color: @colorActiveGrey;
   }
+}
+
+.copyright__logo {
+  flex-shrink: 0;
 }

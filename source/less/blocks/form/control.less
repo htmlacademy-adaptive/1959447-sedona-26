@@ -15,15 +15,15 @@
 
   @media (min-width: @vDesktopWidth) {
     padding-top: 20px;
-    justify-content: space-between;
+    justify-content: flex-start;
     row-gap: 0;
-    padding-left: 52px;
-    padding-right: 25px;
+    padding-left: 53px;
+    padding-right: 10px;
   }
 }
 
 .control__item {
-  margin-bottom: 16px;
+  margin-bottom: 8px;
 
   @media (min-width: @vTabletWidth) {
     width: 50%;
@@ -31,8 +31,12 @@
   }
 
   @media (min-width: @vDesktopWidth) {
-    width: auto;
+    flex: 0 0 280px;
     margin-right: 28px;
+
+    &:last-of-type {
+      margin-right: 0;
+    }
   }
 }
 

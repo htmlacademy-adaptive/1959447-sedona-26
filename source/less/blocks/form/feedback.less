@@ -8,7 +8,7 @@
     align-items: center;
     padding-left: 40px;
     padding-right: 40px;
-    padding-top: 26px;
+    padding-top: 73px;
     padding-bottom: 35px;
   }
 
@@ -27,7 +27,7 @@
   position: relative;
 
   &--control {
-    padding-bottom: 9px;
+    padding-bottom: 11px;
   }
 
   @media (min-width: @vTabletWidth) {
@@ -38,6 +38,7 @@
     &--person {
       width: 50%;
       align-self: flex-start;
+      padding-top: 0;
     }
   }
 
@@ -48,15 +49,18 @@
     &--person {
       padding-top: 0;
       padding-bottom: 0;
+      width: 49%;
     }
   }
 }
 
 .feedback__group:last-of-type {
-  padding-top: 42px;
+  @media (min-width: @vTabletWidth) {
+    padding-top: 24px;
+  }
 
   @media (min-width: @vDesktopWidth) {
-    padding-top: 71px;
+    padding-top: 53px;
   }
 }
 
@@ -65,6 +69,11 @@
     padding-right: 43px;
     border-right: 2px solid @colorSpecialGrey;
     position: relative;
+  }
+
+  @media (min-width: @vDesktopWidth) {
+    padding-right: 57px;
+    width: 51%;
   }
 }
 
@@ -91,6 +100,7 @@
   @media (min-width: @vTabletWidth) {
     margin-bottom: 28px;
     position: relative;
+    margin-top: 0;
 
     &--variation {
       padding-left: 170px;
@@ -105,7 +115,7 @@
       padding-left: 300px;
       padding-right: 300px;
       line-height: 1.1;
-      margin-bottom: 43px;
+      margin-bottom: 63px;
     }
   }
 }
@@ -116,7 +126,7 @@
   }
 
   @media (min-width: @vDesktopWidth) {
-    margin-left: 10px;
+    margin-left: 60px;
   }
 }
 
@@ -153,14 +163,20 @@
   display: flex;
   flex-wrap: wrap;
   margin-bottom: 16px;
-
-  &--pixelPerfect {
-    margin-bottom: 12px;
-  }
 }
 
 .feedback__input[type="email"] {
   padding-right: 80px;
+}
+
+.feedback__item--contact {
+  @media (min-width: @vTabletWidth) {
+    margin-left: 44px;
+  }
+
+  @media (min-width: @vDesktopWidth) {
+    margin-left: 68px;
+  }
 }
 
 .feedback__input-wrapper {
@@ -205,12 +221,6 @@
 .feedback__label {
   text-transform: uppercase;
   margin-left: 16px;
-}
-
-.feedback__group--person .feedback__title {
-  @media (min-width: @vDesktopWidth) {
-    margin-left: 10px;
-  }
 }
 
 .feedback__input-icon {
