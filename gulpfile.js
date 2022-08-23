@@ -10,9 +10,10 @@ import csso from 'postcss-csso';
 import svgstore from 'gulp-svgstore';
 import squoosh from 'gulp-libsquoosh';
 import svgo from 'gulp-svgmin';
+import minify from 'gulp-htmlmin';
+import terser from 'gulp-terser';
 
 // Styles
-
 export const styles = () => {
   return gulp.src('source/less/style.less', { sourcemaps: true })
   .pipe(plumber())
@@ -27,22 +28,22 @@ export const styles = () => {
 }
 
 // HTML
-
 const html = () => {
-  return gulp.src("source/*.html").pipe(gulp.dest("build"));
+  return gulp.src("source/*.html")
+  .pipe(minify({collapseWhitespace: true}))
+  .pipe(gulp.dest("build"));
 };
 
 // Scripts
-
 const scripts = () => {
   return gulp
     .src("source/js/*.js")
+    .pipe(terser())
     .pipe(gulp.dest("build/js"))
     .pipe(browser.stream());
 };
 
 // Images
-
 const optimizeImages = () => {
   return gulp
     .src("source/img/**/*.{png,jpg}")
@@ -55,7 +56,6 @@ const copyImages = () => {
 };
 
 // WebP
-
 const createWebp = () => {
   return gulp
     .src("source/img/**/*.{png,jpg}")
@@ -68,7 +68,6 @@ const createWebp = () => {
 };
 
 // SVG
-
 const svg = () =>
   gulp
     .src(["source/img/*.svg", "!source/img/icons/*.svg", "!source/img/sprite.svg"])
@@ -89,7 +88,6 @@ const sprite = () => {
 };
 
 // Copy
-
 const copy = (done) => {
   gulp
     .src(["source/fonts/*.{woff2,woff}", "source/*.ico", "source/img/sprite.svg"], {
@@ -100,13 +98,11 @@ const copy = (done) => {
 };
 
 // Clean
-
 const clean = () => {
   return del('build');
 };
 
 // Server
-
 const server = (done) => {
   browser.init({
     server: {
@@ -120,14 +116,12 @@ const server = (done) => {
 };
 
 // Reload
-
 const reload = (done) => {
   browser.reload();
   done();
 };
 
 // Watcher
-
 const watcher = () => {
   gulp.watch("source/less/**/*.less", gulp.series(styles));
   gulp.watch("source/js/script.js", gulp.series(scripts));
@@ -135,7 +129,6 @@ const watcher = () => {
 };
 
 // Build
-
 export const build = gulp.series(
   clean,
   copy,
@@ -144,7 +137,6 @@ export const build = gulp.series(
 );
 
 // Default
-
 export default gulp.series(
   clean,
   copy,
