@@ -1,17 +1,1 @@
-const menu = document.querySelector(".header");
-const openMenuButton = document.querySelector(".toggle");
-const likeButtons = Array.from(document.querySelectorAll(".button-love"));
-const likesNumbers = Array.from(document.querySelectorAll(".card__like-count"));
-
-openMenuButton.addEventListener("click", function () {
-  menu.classList.toggle("header--opened");
-});
-
-likeButtons.forEach ((button, index) => {
-  button.addEventListener("click", () => {
-    button.classList.toggle("button-love--like");
-    const current = Number(likesNumbers[index].textContent);
-    const inc = button.classList.contains("button-love--like")? 1 : -1;
-    likesNumbers[index].textContent = current + inc;
-  })
-})
+const menu=document.querySelector(".header"),openMenuButton=document.querySelector(".toggle"),likeButtons=Array.from(document.querySelectorAll(".button-love")),likesNumbers=Array.from(document.querySelectorAll(".card__like-count"));openMenuButton.addEventListener("click",(function(){menu.classList.toggle("header--opened")})),likeButtons.forEach(((e,t)=>{e.addEventListener("click",(()=>{e.classList.toggle("button-love--like");const o=Number(likesNumbers[t].textContent),n=e.classList.contains("button-love--like")?1:-1;likesNumbers[t].textContent=o+n}))}));
