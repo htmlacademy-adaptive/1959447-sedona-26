@@ -9,6 +9,8 @@
   <link rel="icon" href="img/favicon/32.png"> <!-- 32×32 -->
   <link rel="icon" href="img/favicon/152.svg" type="image/svg+xml">
   <link rel="manifest" href="manifest.webmanifest">
+  <link rel="preload" href="fonts/ptsans.woff2" as="font">
+  <link rel="preload" href="fonts/ptsansbold.woff2" as="font">
   <title>Фото и видео</title>
 </head>
 
@@ -77,6 +79,12 @@
           <li class="gallery__item card card--popular">
             <div class="card__image-wrapper">
               <picture>
+                <source type="image/webp" media="(min-width: 1280px)"
+                  srcset="img/photo-1-desktop.webp 1x, img/photo-1-desktop.webp 2x" />
+                <source type="image/webp" media="(min-width: 768px)"
+                  srcset="img/photo-1-tablet.webp 1x, img/photo-1-tablet.webp 2x" />
+                <source type="image/webp" srcset="img/photo-1-mobile.webp 1x, img/photo-1-mobile@2.webp 2x">
+
                 <source media="(min-width: 1280px)" srcset="img/photo-1-desktop.jpg 1x, img/photo-1-desktop@2.jpg 2x">
                 <source media="(min-width: 768px)" srcset="img/photo-1-tablet.jpg 1x, img/photo-1-tablet@2.jpg 2x">
                 <img class="card__image" src="img/photo-1-mobile.jpg" srcset="img/photo-1-mobile@2.jpg 2x" width="280"
@@ -107,6 +115,12 @@
           <li class="gallery__item card">
             <div class="card__image-wrapper">
               <picture>
+                <source type="image/webp" media="(min-width: 1280px)"
+                  srcset="img/photo-2-desktop.webp 1x, img/photo-2-desktop.webp 2x" />
+                <source type="image/webp" media="(min-width: 768px)"
+                  srcset="img/photo-2-tablet.webp 1x, img/photo-2-tablet.webp 2x" />
+                <source type="image/webp" srcset="img/photo-2-mobile.webp 1x, img/photo-2-mobile@2.webp 2x">
+
                 <source media="(min-width: 1280px)" srcset="img/photo-2-desktop.jpg 1x, img/photo-2-desktop@2.jpg 2x">
                 <source media="(min-width: 768px)" srcset="img/photo-2-tablet.jpg 1x, img/photo-2-tablet@2.jpg 2x">
                 <img class="card__image" src="img/photo-2-mobile.jpg" srcset="img/photo-2-mobile@2.jpg 2x" width="280"
@@ -136,6 +150,12 @@
           <li class="gallery__item card">
 
             <picture>
+              <source type="image/webp" media="(min-width: 1280px)"
+                srcset="img/photo-3-desktop.webp 1x, img/photo-3-desktop.webp 2x" />
+              <source type="image/webp" media="(min-width: 768px)"
+                srcset="img/photo-3-tablet.webp 1x, img/photo-3-tablet.webp 2x" />
+              <source type="image/webp" srcset="img/photo-3-mobile.webp 1x, img/photo-3-mobile@2.webp 2x">
+
               <source media="(min-width: 1280px)" srcset="img/photo-3-desktop.jpg 1x, img/photo-3-desktop@2.jpg 2x">
               <source media="(min-width: 768px)" srcset="img/photo-3-tablet.jpg 1x, img/photo-3-tablet@2.jpg 2x">
               <img class="card__image" src="img/photo-3-mobile.jpg" srcset="img/photo-3-mobile@2.jpg 2x" width="280"
@@ -165,6 +185,12 @@
           <li class="gallery__item card">
 
             <picture>
+              <source type="image/webp" media="(min-width: 1280px)"
+                srcset="img/photo-4-desktop.webp 1x, img/photo-4-desktop.webp 2x" />
+              <source type="image/webp" media="(min-width: 768px)"
+                srcset="img/photo-4-tablet.webp 1x, img/photo-4-tablet.webp 2x" />
+              <source type="image/webp" srcset="img/photo-4-mobile.webp 1x, img/photo-4-mobile@2.webp 2x">
+
               <source media="(min-width: 1280px)" srcset="img/photo-4-desktop.jpg 1x, img/photo-4-desktop@2.jpg 2x">
               <source media="(min-width: 768px)" srcset="img/photo-4-tablet.jpg 1x, img/photo-4-tablet@2.jpg 2x">
               <img class="card__image" src="img/photo-4-mobile.jpg" srcset="img/photo-4-mobile@2.jpg 2x" width="280"
