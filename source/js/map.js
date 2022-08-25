@@ -12,7 +12,7 @@ L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
 }).addTo(map);
 
 const mainPinIcon = L.icon({
-  iconUrl: "img/icon/map-marker.svg",
+  iconUrl: "img/map-marker.svg",
   iconSize: [27, 27],
   iconAnchor: [27, 13],
 });
