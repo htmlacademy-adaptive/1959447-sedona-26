@@ -8,10 +8,21 @@
   }
 }
 
+.header__logo {
+  z-index: 1;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  top: 0;
+}
+
 .header--opened .header__dropdown {
   display: block;
 }
 
+.header--opened .header__logo {
+  z-index: -1;
+}
 
 .header__wrapper {
   text-align: right;
@@ -47,11 +58,4 @@
   @media (min-width: @vDesktopWidth) {
     padding-top: 9px;
   }
-}
-
-.header__logo {
-  position: absolute;
-  left: 50%;
-  transform: translate(-50%);
-  top: 0;
 }
