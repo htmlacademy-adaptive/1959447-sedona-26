@@ -48,11 +48,11 @@
   font-weight: 700;
   font-size: 18px;
   line-height: 1.44;
-  color: rgba(0, 0, 0, 0.3);
   resize: none;
   min-height: 150px;
   font-family: inherit;
   display: block;
+  cursor: pointer;
 
   @media (min-width: @vTabletWidth) {
     padding-top: 17px;
@@ -70,8 +70,15 @@
   outline: none;
 }
 
-.review__content:active {
+.review__content:focus {
   background-color: @colorWhite;
   outline: 4px solid @colorControlGrey;
+}
+
+.review__content::placeholder {
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.review__content:focus .review__content::placeholder {
   color: @colorBlackDark;
 }

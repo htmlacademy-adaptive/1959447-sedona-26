@@ -119,3 +119,23 @@
     margin-right: 0;
   }
 }
+
+.features__item:first-child .features__description {
+  @media (min-width: @vTabletWidth) {
+    width: 84%;
+  }
+
+  @media (min-width: @vDesktopWidth) {
+    width: auto;
+  }
+}
+
+.features__item:last-child .features__description {
+  @media (min-width: @vTabletWidth) {
+    width: 96%;
+  }
+
+  @media (min-width: @vDesktopWidth) {
+    width: auto;
+  }
+}

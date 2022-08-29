@@ -277,5 +277,8 @@
 }
 
 .advantages__item:last-of-type .advantages__name {
-  width: 55%;
+  @media (min-width: @vTabletWidth) {
+    display: flex;
+    flex-direction: column;
+  }
 }

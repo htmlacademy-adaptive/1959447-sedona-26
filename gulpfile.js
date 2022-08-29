@@ -90,7 +90,7 @@ const sprite = () => {
 // Copy
 const copy = (done) => {
   gulp
-    .src(["source/fonts/*.{woff2,woff}", "source/*.ico", "source/img/sprite.svg"], {
+    .src(["source/fonts/*.{woff2,woff}", "source/*.ico",  "source/manifest.webmanifest",  "source/img/sprite.svg"], {
       base: "source",
     })
     .pipe(gulp.dest("build"));
@@ -124,7 +124,7 @@ const reload = (done) => {
 // Watcher
 const watcher = () => {
   gulp.watch("source/less/**/*.less", gulp.series(styles));
-  gulp.watch("source/js/script.js", gulp.series(scripts));
+  gulp.watch("source/js/*.js", gulp.series(scripts));
   gulp.watch("source/*.html", gulp.series(html, reload));
 };
 
