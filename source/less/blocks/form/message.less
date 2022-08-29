@@ -16,7 +16,7 @@
 .message__container {
   position: relative;
   margin: auto;
-  padding-top: 36px;
+  padding-top: 40px;
   background-color: #ffffff;
   display: flex;
   flex-direction: column;
@@ -40,7 +40,7 @@
   line-height: 1.44;
   text-transform: uppercase;
   margin: 0;
-  margin-bottom: 36px;
+  margin-bottom: 35px;
 
   @media (min-width: @vTabletWidth) {
     font-size: 30px;
@@ -66,9 +66,11 @@
 }
 
 .message__button {
+  .button;
   border: 20px solid @colorSpecialGrey;
   font-size: 18px;
   line-height: 26px;
+
 
   &--error {
     border: none;

@@ -64,15 +64,12 @@
   color: @colorBlackDark;
 }
 
-.card__image {
-  border: none;
-  display: block;
-  width: 100%;
+.card__image-wrapper {
+  height: 280px;
 
   @media (min-width: @vTabletWidth) {
     grid-column: 1/-1;
     height: 267px;
-    background-size: contain;
   }
 
   @media (min-width: @vDesktopWidth) {
@@ -80,7 +77,17 @@
   }
 }
 
-.card--popular .card__image {
+.card__image {
+  border: none;
+  width: 100%;
+  object-fit: cover;
+
+  @media (min-width: @vTabletWidth) {
+    height: 100%;
+  }
+}
+
+.card--popular .card__image-wrapper {
   @media (min-width: @vTabletWidth) {
     min-height: 400px;
   }
@@ -136,7 +143,7 @@
     grid-column: 1/2;
     grid-row: 3/4;
     margin-left: 20px;
-    margin-bottom: 14px;
+    margin-bottom: 15px;
   }
 
   @media (min-width: @vDesktopWidth) {
@@ -153,22 +160,32 @@
     margin-left: auto;
     margin-right: 20px;
     margin-bottom: 0;
+    margin-top: 7px;
   }
 
   @media (min-width: @vDesktopWidth) {
     color: @colorWhite;
     margin-right: 0;
+    margin-top: 0;
   }
 }
 
 .card:last-child .card__like {
   margin-bottom: 2px;
+
+  @media (min-width: @vTabletWidth) {
+    margin-bottom: 0;
+  }
 }
 
 .card__like-count {
   margin: 0;
   margin-left: 14px;
   font-weight: 700;
+
+  @media (min-width: @vTabletWidth) {
+    margin-left: 10px;
+  }
 
   @media (min-width: @vDesktopWidth) {
     margin-left: 10px;

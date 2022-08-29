@@ -77,20 +77,21 @@
 
         <ul class="gallery__list">
           <li class="gallery__item card card--popular">
-            <div class="card__image-wrapper">
               <a class="card__link" href="#">
-                <picture>
-                  <source type="image/webp" media="(min-width: 1200px)"
-                    srcset="img/photo-1-desktop.webp 1x, img/photo-1-desktop.webp 2x" />
-                  <source type="image/webp" media="(min-width: 768px)"
-                    srcset="img/photo-1-tablet.webp 1x, img/photo-1-tablet.webp 2x" />
-                  <source type="image/webp" srcset="img/photo-1-mobile.webp 1x, img/photo-1-mobile@2.webp 2x">
+                <div class="card__image-wrapper">
+                  <picture>
+                    <source type="image/webp" media="(min-width: 1200px)"
+                      srcset="img/photo-1-desktop.webp 1x, img/photo-1-desktop.webp 2x" />
+                    <source type="image/webp" media="(min-width: 768px)"
+                      srcset="img/photo-1-tablet.webp 1x, img/photo-1-tablet.webp 2x" />
+                    <source type="image/webp" srcset="img/photo-1-mobile.webp 1x, img/photo-1-mobile@2.webp 2x">
 
-                  <source media="(min-width: 1200px)" srcset="img/photo-1-desktop.jpg 1x, img/photo-1-desktop@2.jpg 2x">
-                  <source media="(min-width: 768px)" srcset="img/photo-1-tablet.jpg 1x, img/photo-1-tablet@2.jpg 2x">
-                  <img class="card__image" src="img/photo-1-mobile.jpg" srcset="img/photo-1-mobile@2.jpg 2x" width="280"
-                    height="280" alt="Фото Неродные просторы." />
-                </picture>
+                    <source media="(min-width: 1200px)" srcset="img/photo-1-desktop.jpg 1x, img/photo-1-desktop@2.jpg 2x">
+                    <source media="(min-width: 768px)" srcset="img/photo-1-tablet.jpg 1x, img/photo-1-tablet@2.jpg 2x">
+                    <img class="card__image" src="img/photo-1-mobile.jpg" srcset="img/photo-1-mobile@2.jpg 2x" width="280"
+                      height="280" alt="Фото Неродные просторы." />
+                  </picture>
+                </div>
               </a>
               <div class="card__description">
                 <div class="card__title">
@@ -110,7 +111,6 @@
                   <p class="card__like-count">1350</p>
                 </div>
               </div>
-            </div>
           </li>
 
           <li class="gallery__item card">
