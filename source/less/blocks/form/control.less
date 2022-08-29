@@ -78,3 +78,15 @@
 .control__input:checked + .control__button::before {
   display: block;
 }
+
+.control__label:hover .control__button {
+  background-color: @colorControlGrey;
+}
+
+.control__label:active .control__button {
+  background-color: @colorActiveGrey;
+}
+
+.control__label:active .control__button::before {
+  background-color: rgba(51, 51, 51, 0.3);
+}
