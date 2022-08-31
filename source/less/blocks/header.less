@@ -130,3 +130,17 @@
 .header__toggle:active .header__toggle::before {
   background-color: fade(@colorWhite, 30%);
 }
+
+.nojs .header__dropdown {
+  display: block;
+  position: static;
+  margin-top: 85px;
+}
+
+.nojs .header__wrapper {
+  padding-bottom: 0;
+}
+
+.nojs .header__toggle {
+  display: none;
+}
