@@ -97,6 +97,10 @@
   z-index: 2;
 }
 
+.header--opened .header__toggle {
+  background-color: inherit;
+}
+
 .header--opened .header__toggle::after {
   background-color: @colorWhite;
   transform: rotate(-45deg);
@@ -107,4 +111,22 @@
   transform: rotate(45deg);
   background-color: @colorWhite;
   top: 8px;
+}
+
+.header__toggle:hover {
+  background-color: fade(@colorBasicBlue, 60%);
+}
+
+.header__toggle:active {
+  background-color: fade(@colorBasicBlue, 30%);
+}
+
+.header__toggle:hover .header__toggle::after,
+.header__toggle:hover .header__toggle::before {
+  background-color: fade(@colorWhite, 60%);
+}
+
+.header__toggle:active .header__toggle::after,
+.header__toggle:active .header__toggle::before {
+  background-color: fade(@colorWhite, 30%);
 }
