@@ -92,23 +92,19 @@
   left: 0;
 }
 
-.header__toggle:hover + .header__dropdown {
+.header--opened .header__dropdown {
   display: block;
   z-index: 2;
 }
 
-.header__toggle:hover {
-  z-index: 3;
+.header--opened .header__toggle::after {
+  background-color: @colorWhite;
+  transform: rotate(-45deg);
+  bottom: 9px;
+}
 
-  &::after {
-    transform: rotate(-45deg);
-    background-color: @colorWhite;
-    bottom: 9px;
-  }
-
-  &::before {
-    transform: rotate(45deg);
-    background-color: @colorWhite;
-    top: 8px;
-  }
+.header--opened .header__toggle::before {
+  transform: rotate(45deg);
+  background-color: @colorWhite;
+  top: 8px;
 }
