@@ -29,7 +29,7 @@
   @media (min-width: @vTabletWidth) {
     font-size: 30px;
     line-height: 0.87;
-    margin-bottom: 32px;
+    margin-bottom: 31px;
   }
 }
 
@@ -40,8 +40,9 @@
   margin-bottom: 32px;
 
   @media (min-width: @vTabletWidth) {
-    display: block;
-    margin-bottom: 41px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 43px;
   }
 
   @media (min-width: @vDesktopWidth) {
@@ -49,13 +50,9 @@
   }
 }
 
-.hotel-offer__description-part1 {
-  @media (min-width: @vTabletWidth) {
-    margin-left: 40px;
-    margin-right: 40px;
-  }
-}
-
-.hotel-offer__button {
+.hotel-offer__link {
   .button;
+  display: block;
+  padding-top: 14px;
+  padding-bottom: 17px;
 }

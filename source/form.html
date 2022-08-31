@@ -26,12 +26,7 @@
           </a>
         </div>
 
-        <input id="toggle" class="toggle visually-hidden" type="checkbox">
-        <label for="toggle" class="header__toggle hamburger">
-          <span class="hamburger__line hamburger__line--top"></span>
-          <span class="hamburger__line hamburger__line--meat"></span>
-          <span class="hamburger__line hamburger__line--bottom"></span>
-        </label>
+        <button id="toggle" class="header__toggle"></button>
 
         <div class="header__dropdown">
           <nav class="header__nav navigation">
@@ -77,33 +72,33 @@
             <fieldset class="feedback__group feedback__group--person">
               <h4 class="feedback__title">Представьтесь:</h4>
               <div class="feedback__item">
-                <label class="feedback__label">Имя*:</label>
-                <input class="feedback__input" type="text" required name="name" placeholder="Пётр" />
+                <label class="feedback__label" for="name">Имя*:</label>
+                <input class="feedback__input" type="text" required name="name" placeholder="Пётр" id="name"/>
               </div>
               <div class="feedback__item">
-                <label class="feedback__label">Фамилия*:</label>
-                <input class="feedback__input" type="text" required name="surname" placeholder="Пустота" />
+                <label class="feedback__label" for="surname">Фамилия*:</label>
+                <input class="feedback__input" type="text" required name="surname" placeholder="Пустота" id="surname" />
               </div>
               <div class="feedback__item">
-                <label class="feedback__label">Отчество:</label>
-                <input class="feedback__input" type="text" name="middle name" placeholder="Викторович" />
+                <label class="feedback__label" for="middle name">Отчество:</label>
+                <input class="feedback__input" type="text" name="middle name" placeholder="Викторович" id="middle name" />
               </div>
             </fieldset>
 
             <fieldset class="feedback__group feedback__group--person">
               <h4 class="feedback__title">Контактная информация:</h4>
               <div class="feedback__item feedback__item--contact">
-                <label class="feedback__label">Контактный телефон*:</label>
+                <label class="feedback__label" for="phone">Контактный телефон*:</label>
                 <div class="feedback__input-wrapper">
                   <input class="feedback__input" type="tel" name="telephone number" required
-                  placeholder="Введите телефон" maxlength="15" />
+                  placeholder="Введите телефон" maxlength="15" id="phone" />
                   <span class="feedback__input-icon feedback__input-icon--tel"></span>
                 </div>
               </div>
               <div class="feedback__item feedback__item--contact">
-                <label class="feedback__label">Электронная почта*:</label>
+                <label class="feedback__label" for="mail">Электронная почта*:</label>
                 <div class="feedback__input-wrapper">
-                  <input class="feedback__input" type="email" name="email" required placeholder="Введите e-mail" />
+                  <input class="feedback__input" type="email" name="email" required placeholder="Введите e-mail" id="mail" />
                   <span class="feedback__input-icon feedback__input-icon--mail"></span>
                 </div>
               </div>
