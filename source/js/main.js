@@ -1,11 +1,5 @@
-const menu = document.querySelector(".header");
-const openMenuButton = document.querySelector(".toggle");
 const likeButtons = Array.from(document.querySelectorAll(".button-love"));
 const likesNumbers = Array.from(document.querySelectorAll(".card__like-count"));
-
-openMenuButton.addEventListener("click", function () {
-  menu.classList.toggle("header--opened");
-});
 
 likeButtons.forEach ((button, index) => {
   button.addEventListener("click", () => {

@@ -7,11 +7,14 @@
   list-style: none;
   padding: 0;
   margin: 0;
+  background-color: @colorDarkBlue;
 
   @media (min-width: @vTabletWidth) {
     display: flex;
     width: 100%;
     flex-wrap: wrap;
+    background-color: inherit;
+    justify-content: space-between;
   }
 }
 
@@ -28,11 +31,7 @@
   padding-bottom: 12px;
   display: block;
   box-shadow: 0 1px 0 rgba(1, 1, 1, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.2);
-  background: linear-gradient(
-    180deg,
-    rgba(0, 0, 0, 0) 0%,
-    rgba(0, 0, 0, 0.2) 100%
-  );
+  word-wrap: break-word;
 
   &:disabled {
     background-color: @colorControlGrey;
@@ -47,6 +46,7 @@
     padding-top: 10px;
     padding-bottom: 0;
     height: auto;
+    justify-self: center;
 
     &--current {
       color: @colorBrown;
@@ -76,21 +76,66 @@
 .navigation__item {
   width: 100%;
   background-color: @colorBasicBlue;
-  box-shadow: 0 1px 0 rgba(1, 1, 1, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.2);
+  margin-bottom: 1px;
 
   @media (min-width: @vTabletWidth) {
     background-color: inherit;
-    flex: 0 0 153px;
+    width: auto;
+    flex-basis: 30%;
     box-shadow: none;
   }
+}
 
-  @media (min-width: @vDesktopWidth) {
-    flex: 0 0 240px;
+.navigation__item:last-child {
+  position: relative;
+}
+
+.navigation__item:last-child::after {
+  content: "";
+  height: 7px;
+  width: 100%;
+  position: absolute;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.2) 100%);
+  bottom: 0;
+  left: 0;
+
+  @media (min-width: @vTabletWidth) {
+    display: none;
   }
 }
 
 .navigation__list .navigation__item:nth-child(4n + 3) {
   @media (min-width: @vTabletWidth) {
-    margin-left: auto;
+    padding-left: 72px;
+  }
+
+  @media (min-width: @vDesktopWidth) {
+    padding-left: 118px;
+  }
+}
+
+.navigation__list .navigation__item:nth-child(4n + 2) {
+  @media (min-width: @vTabletWidth) {
+    padding-right: 78px;
+  }
+
+  @media (min-width: @vDesktopWidth) {
+    padding-right: 118px;
+  }
+}
+
+.navigation__item:first-child {
+  @media (min-width: @vTabletWidth) {
+    max-width: 20%;
+    flex-grow: 0;
+    flex-shrink: 0;
+  }
+}
+
+.navigation__item:nth-child(4n+4) {
+  @media (min-width: @vTabletWidth) {
+    max-width: 20%;
+    flex-grow: 0;
+    flex-shrink: 0;
   }
 }
