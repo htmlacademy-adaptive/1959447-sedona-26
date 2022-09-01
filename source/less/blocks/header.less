@@ -26,6 +26,7 @@
     display: flex;
     padding-top: 9px;
     padding-left: 3px;
+    padding-bottom: 16px;
   }
 
   @media (min-width: @vDesktopWidth) {
@@ -129,22 +130,4 @@
 .header__toggle:active .header__toggle::after,
 .header__toggle:active .header__toggle::before {
   background-color: fade(@colorWhite, 30%);
-}
-
-.nojs .header__dropdown {
-  display: block;
-  position: static;
-  margin-top: 85px;
-
-  @media (min-width: @vTabletWidth) {
-    margin-top: 0;
-  }
-}
-
-.nojs .header__wrapper {
-  padding-bottom: 0;
-}
-
-.nojs .header__toggle {
-  display: none;
 }
